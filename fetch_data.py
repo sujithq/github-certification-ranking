@@ -16,6 +16,7 @@ from datetime import datetime
 from generate_rankings import CONTINENT_MAP
 
 METADATA_FILE = 'csv_metadata.json'
+IGNORED_COUNTRIES = ['India']  # Temporarily ignore these countries
 
 def get_all_countries():
     """Extract unique countries from CONTINENT_MAP"""
@@ -23,7 +24,8 @@ def get_all_countries():
     for country in CONTINENT_MAP.keys():
         # Convert to title case for proper country names
         country_name = country.title()
-        countries.add(country_name)
+        if country_name not in IGNORED_COUNTRIES:
+            countries.add(country_name)
     return sorted(countries)
 
 def load_metadata():

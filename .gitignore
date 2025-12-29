@@ -1,0 +1,3 @@
+# CSV data files - regenerated on each workflow run
+*.csv
+

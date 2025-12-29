@@ -36,22 +36,13 @@ jobs:
         run: |
           python3 generate_rankings.py
       
-      - name: Clean up CSV files
-        run: |
-          echo "Removing CSV files (they will be regenerated on next run)..."
-          rm -f github-certs-*.csv
-          echo "CSV files removed"
-      
-      - name: Commit and push rankings
+      - name: Commit and push rankings and CSVs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Add only the markdown files
-          git add TOP10_*.md README.md
-          
-          # Remove CSV files from git if they were tracked
-          git rm --cached github-certs-*.csv 2>/dev/null || true
+          # Add markdown files, CSV files, and metadata
+          git add TOP10_*.md README.md github-certs-*.csv csv_metadata.json
           
           if git diff --staged --quiet; then
             echo "No changes to commit"

@@ -5,6 +5,8 @@ Fetch GitHub Certifications data for all countries
 Runs cert-github.sh in parallel for all countries in CONTINENT_MAP
 """
 
+import json
+import os
 import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -12,6 +14,8 @@ from datetime import datetime
 
 # Import CONTINENT_MAP from generate_rankings
 from generate_rankings import CONTINENT_MAP
+
+METADATA_FILE = 'csv_metadata.json'
 
 def get_all_countries():
     """Extract unique countries from CONTINENT_MAP"""
@@ -22,12 +26,31 @@ def get_all_countries():
         countries.add(country_name)
     return sorted(countries)
 
-def fetch_country_data(country):
+def load_metadata():
+    """Load CSV metadata from file"""
+    if os.path.exists(METADATA_FILE):
+        with open(METADATA_FILE, 'r') as f:
+            return json.load(f)
+    return {}
+
+def save_metadata(metadata):
+    """Save CSV metadata to file"""
+    with open(METADATA_FILE, 'w') as f:
+        json.dump(metadata, f, indent=2)
+
+def get_csv_filename(country):
+    """Get CSV filename for a country"""
+    file_suffix = country.lower().replace(' ', '-')
+    return f'github-certs-{file_suffix}.csv'
+
+def fetch_country_data(country, metadata):
     """Fetch data for a single country using cert-github.sh"""
     # Larger countries need more time
     large_countries = ['Brazil', 'India', 'United States', 'China', 'Germany', 
                        'United Kingdom', 'France', 'Canada', 'Japan']
-    timeout = 900 if country in large_countries else 120  # 15 minutes for large countries
+    timeout = 3600 if country in large_countries else 120  # 60 minutes for large countries
+    
+    csv_file = get_csv_filename(country)
     
     try:
         result = subprocess.run(
@@ -38,6 +61,12 @@ def fetch_country_data(country):
         )
         
         if result.returncode == 0:
+            # Update metadata with successful download
+            metadata[country] = {
+                'csv_file': csv_file,
+                'last_updated': datetime.now().isoformat(),
+                'status': 'success'
+            }
             return (country, 'success', None)
         else:
             return (country, 'failed', f"Exit code: {result.returncode}")
@@ -52,6 +81,9 @@ def main():
     print("GitHub Certifications Data Fetcher")
     print("=" * 80)
     print()
+    
+    # Load existing metadata
+    metadata = load_metadata()
     
     # Get all countries
     countries = get_all_countries()
@@ -69,7 +101,7 @@ def main():
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         # Submit all tasks
         future_to_country = {
-            executor.submit(fetch_country_data, country): country 
+            executor.submit(fetch_country_data, country, metadata): country 
             for country in countries
         }
         
@@ -81,8 +113,11 @@ def main():
                 print(f"✓ [{i}/{total_countries}] Success: {country}")
                 success_count += 1
             else:
-                print(f"✗ [{i}/{total_countries}] Failed: {country} ({error})")
+                print(f"✗ [{i}/{total_countries}] Failed: {country} ({error}) - using previous CSV if available")
                 failed_countries.append(country)
+    
+    # Save updated metadata
+    save_metadata(metadata)
     
     print()
     print("=" * 80)
@@ -92,14 +127,19 @@ def main():
     
     if failed_countries:
         print()
-        print("Failed countries:")
+        print("⚠️  Failed countries (will use previous CSV if available):")
         for country in failed_countries:
-            print(f"  - {country}")
+            csv_file = get_csv_filename(country)
+            if os.path.exists(csv_file):
+                print(f"  - {country} (using previous CSV)")
+            else:
+                print(f"  - {country} (NO CSV AVAILABLE)")
     
     print("=" * 80)
+    print("✅ Proceeding with ranking generation...")
     
-    # Return non-zero exit code if any failures
-    sys.exit(0 if len(failed_countries) == 0 else 1)
+    # Always exit with 0 to continue with ranking generation
+    sys.exit(0)
 
 if __name__ == "__main__":
     main()

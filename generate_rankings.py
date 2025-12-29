@@ -7,6 +7,7 @@ Generates TOP 10 rankings for Brazil, Americas, Europe, Asia, Oceania, and World
 
 import csv
 import glob
+import json
 import os
 from collections import defaultdict
 from datetime import datetime
@@ -96,10 +97,19 @@ def get_continent(country_name):
     country_lower = country_name.lower().replace('-', ' ')
     return CONTINENT_MAP.get(country_lower, 'Unknown')
 
+def load_metadata():
+    """Load CSV metadata"""
+    metadata_file = 'csv_metadata.json'
+    if os.path.exists(metadata_file):
+        with open(metadata_file, 'r') as f:
+            return json.load(f)
+    return {}
+
 def read_all_csv_files(base_path):
     """Read all CSV files and return users list"""
     users = []
     csv_files = glob.glob(os.path.join(base_path, 'github-certs-*.csv'))
+    metadata = load_metadata()
     
     print(f"📂 Processing {len(csv_files)} CSV files...")
     
@@ -142,6 +152,26 @@ def read_all_csv_files(base_path):
     print(f"✅ Loaded {len(users)} users from all files")
     return users
 
+def get_outdated_csvs():
+    """Get list of CSVs that weren't updated in the last run"""
+    metadata = load_metadata()
+    current_time = datetime.now()
+    outdated = []
+    
+    for country, info in metadata.items():
+        last_updated = datetime.fromisoformat(info['last_updated'])
+        hours_old = (current_time - last_updated).total_seconds() / 3600
+        
+        # Consider outdated if more than 25 hours old (1 day + buffer)
+        if hours_old > 25:
+            outdated.append({
+                'country': country,
+                'last_updated': last_updated.strftime('%Y-%m-%d %H:%M UTC'),
+                'hours_old': int(hours_old)
+            })
+    
+    return sorted(outdated, key=lambda x: x['hours_old'], reverse=True)
+
 def generate_markdown_top10(users, title, filename, filter_func=None):
     """Generate TOP 10 markdown file"""
     
@@ -153,6 +183,9 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
     
     # Sort by badges (descending)
     sorted_users = sorted(filtered_users, key=lambda x: x['badges'], reverse=True)[:10]
+    
+    # Get outdated CSVs
+    outdated = get_outdated_csvs()
     
     # Generate markdown content
     content = f"""# {title}
@@ -187,9 +220,27 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
 - **Highest Badge Count**: {sorted_users[0]['badges'] if sorted_users else 0}
 
 ---
-
-*Data sourced from GitHub Certifications via Credly API*
 """
+    
+    # Add outdated data warning if applicable
+    if outdated:
+        content += """
+## ⚠️ Data Freshness Warning
+
+The following countries have data that was not updated in the last run:
+
+| Country | Last Updated | Hours Old |
+|---------|--------------|-----------|
+"""
+        for item in outdated[:10]:  # Show max 10
+            content += f"| {item['country']} | {item['last_updated']} | {item['hours_old']}h |\n"
+        
+        if len(outdated) > 10:
+            content += f"\n*... and {len(outdated) - 10} more countries*\n"
+        
+        content += "\n---\n"
+    
+    content += "\n*Data sourced from GitHub Certifications via Credly API*\n"
     
     # Write to file
     output_path = os.path.join(os.path.dirname(__file__), filename)

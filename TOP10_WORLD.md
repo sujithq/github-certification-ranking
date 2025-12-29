@@ -1,6 +1,6 @@
 # 🌍 TOP 10 GitHub Certifications - World
 
-> Last updated: December 29, 2025 at 11:41 UTC
+> Last updated: December 29, 2025 at 16:49 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -9,13 +9,13 @@
 | 🥇 #1 | Rob Bos | 14 | Netherlands |
 | 🥈 #2 | Olivier Delmotte | 13 | France |
 | 🥉 #3 | Christos Galanopoulos | 12 | Greece |
-|    #4 | Nico Orschel | 12 | Germany |
-|    #5 | Daniel Koch | 12 | United States |
+|    #4 | Daniel Koch | 12 | United States |
+|    #5 | Nico Orschel | 12 | Germany |
 |    #6 | Marco Celon | 12 | Australia |
 |    #7 | Sujith Quintelier | 12 | Belgium |
-|    #8 | Konrad Dunikowski | 11 | Poland |
-|    #9 | Andre Dias | 11 | Brazil |
-|    #10 | John Wildes | 11 | United States |
+|    #8 | Andre Dias | 11 | Brazil |
+|    #9 | John Wildes | 11 | United States |
+|    #10 | Konrad Dunikowski | 11 | Poland |
 
 ---
 

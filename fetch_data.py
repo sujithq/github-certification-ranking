@@ -16,16 +16,24 @@ from datetime import datetime
 from generate_rankings import CONTINENT_MAP
 
 METADATA_FILE = 'csv_metadata.json'
-IGNORED_COUNTRIES = []  # Temporarily ignore these countries
 DATASOURCE_DIR = 'datasource'
+
+def get_ignored_countries():
+    """Get list of countries to ignore based on date"""
+    # India only runs on the 1st of each month (too large for daily runs)
+    current_day = datetime.now().day
+    if current_day != 1:
+        return ['India']
+    return []
 
 def get_all_countries():
     """Extract unique countries from CONTINENT_MAP"""
+    ignored_countries = get_ignored_countries()
     countries = set()
     for country in CONTINENT_MAP.keys():
         # Convert to title case for proper country names
         country_name = country.title()
-        if country_name not in IGNORED_COUNTRIES:
+        if country_name not in ignored_countries:
             countries.add(country_name)
     return sorted(countries)
 
@@ -48,10 +56,13 @@ def get_csv_filename(country):
 
 def fetch_country_data(country, metadata):
     """Fetch data for a single country using cert-github.sh"""
-    # Larger countries need more time
-    large_countries = ['Brazil', 'India', 'United States', 'China', 'Germany', 
-                       'United Kingdom', 'France', 'Canada', 'Japan']
-    timeout = 3600 if country in large_countries else 120  # 60 minutes for large countries
+    # Very large countries need much more time (India can have 20k+ users = 2500+ pages)
+    if country == 'India':
+        timeout = 36000  # 10 hours for India
+    elif country in ['Brazil', 'United States', 'China', 'Germany', 'United Kingdom', 'France', 'Canada', 'Japan']:
+        timeout = 900  # 15 minutes for other large countries
+    else:
+        timeout = 300  # 5 minutes for regular countries
     
     csv_file = get_csv_filename(country)
     
@@ -93,9 +104,12 @@ def main():
     
     # Get all countries
     countries = get_all_countries()
+    ignored = get_ignored_countries()
     total_countries = len(countries)
     
     print(f"📋 Found {total_countries} countries to process")
+    if ignored:
+        print(f"⏭️  Skipping (monthly only): {', '.join(ignored)}")
     print(f"⏰ Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print()
     

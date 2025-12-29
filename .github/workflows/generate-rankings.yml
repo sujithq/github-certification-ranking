@@ -10,7 +10,7 @@ on:
 jobs:
   generate-rankings:
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # Prevent workflow from running too long
+    timeout-minutes: 720  # 12 hours for large countries
     permissions:
       contents: write  # Allow workflow to push changes
     
@@ -28,7 +28,7 @@ jobs:
           pip install --upgrade pip
       
       - name: Fetch certification data
-        timeout-minutes: 60  # Limit data fetching to 60 minutes
+        timeout-minutes: 700  # Limit data fetching to ~11.5 hours
         run: |
           mkdir -p datasource
           chmod +x cert-github.sh

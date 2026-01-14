@@ -1,7 +1,7 @@
-first_name,middle_name,last_name,badge_count
-ayman,,ABDOURAHMAN MOHAMED,1
-Félicien,,Diouf,1
-Cheikh Babacar,,GOUDIABY,2
-Ndiaga,,Ndiaye,1
-Principe,,SEKANLIN,1
-Ibrahima,,lo,1
+first_name,middle_name,last_name,badge_count,profile_url
+ayman,,ABDOURAHMAN MOHAMED,1,/users/ayman-abdourahman-mohamed/badges
+Félicien,,Diouf,1,/users/felicien-diouf/badges
+Cheikh Babacar,,GOUDIABY,2,/users/cheikh-babacar-goudiaby/badges
+Ndiaga,,Ndiaye,1,/users/ndiaga-ndiaye/badges
+Principe,,SEKANLIN,1,/users/principe-sekanlin/badges
+Ibrahima,,lo,1,/users/ibrahima-lo.c286e9d2/badges

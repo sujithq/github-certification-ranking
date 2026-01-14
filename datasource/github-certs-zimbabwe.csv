@@ -1,17 +1,17 @@
-first_name,middle_name,last_name,badge_count
-Clarence,,Chikwezeze,1
-Raldo G,,Chimwendo,1
-John,,Diya,1
-Janvier,,Iyakaremye,1
-Tendai,,Kachidza,1
-SIMBARASHE BLESSED,,MAHLAULO,1
-Ngonidzashe,,Mapfumo,1
-Panashe,,Mapika,1
-Nigel,,Mashayamombe,1
-Emmanuel,,Maunga,1
-Michelle Munashe,,Mupanduki,1
-Boitumelo,,Ngwenya,1
-Anesu,,Rirwa,1
-Alfred,Tadyanemhandu,Samanga,1
-Tadiwanashe,Rodney,Zvidza,1
-anotida,,maditsha,1
+first_name,middle_name,last_name,badge_count,profile_url
+Clarence,,Chikwezeze,1,/users/webmaster/badges
+Raldo G,,Chimwendo,1,/users/raldo-g-chimwendo/badges
+John,,Diya,1,/users/john-diya/badges
+Janvier,,Iyakaremye,1,/users/janvier-iyakaremye/badges
+Tendai,,Kachidza,1,/users/tendai-kachidza/badges
+SIMBARASHE BLESSED,,MAHLAULO,1,/users/simbarashe-blessed-mahlaulo/badges
+Ngonidzashe,,Mapfumo,1,/users/ngonidzashe-mapfumo/badges
+Panashe,,Mapika,1,/users/panashe-mapika/badges
+Nigel,,Mashayamombe,1,/users/nigel-mashayamombe.e67aef4b/badges
+Emmanuel,,Maunga,1,/users/emmanuel-maunga/badges
+Michelle Munashe,,Mupanduki,1,/users/michelle-munashe-mupanduki/badges
+Boitumelo,,Ngwenya,1,/users/boitumelo-ngwenya.5ab0b3c8/badges
+Anesu,,Rirwa,1,/users/anesu-rirwa/badges
+Alfred,Tadyanemhandu,Samanga,1,/users/alfred-samanga/badges
+Tadiwanashe,Rodney,Zvidza,1,/users/tadiwanashe-zvidza/badges
+anotida,,maditsha,1,/users/anotida-maditsha/badges

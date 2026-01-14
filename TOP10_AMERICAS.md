@@ -1,21 +1,21 @@
 # 🌎 TOP 10 GitHub Certifications - Americas
 
-> Last updated: January 14, 2026 at 14:06 UTC
+> Last updated: January 14, 2026 at 15:12 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Country |
 |------|------|--------|---------|
-| 🥇 #1 | Andre Dias | 14 | Brazil |
-| 🥈 #2 | Daniel Koch | 12 | United States |
-| 🥉 #3 | John Wildes | 11 | United States |
+| 🥇 #1 | [Andre Dias](https://www.credly.com/users/andredias/badges) | 14 | Brazil |
+| 🥈 #2 | [Daniel Koch](https://www.credly.com/users/daniel-koch.dc5d8183/badges) | 12 | United States |
+| 🥉 #3 | [John Wildes](https://www.credly.com/users/john-wildes/badges) | 11 | United States |
 | #4 | Benjamin Marsteau | 10 | Canada |
-| #5 | Bill Schneider | 9 | United States |
+| #5 | [Bill Schneider](https://www.credly.com/users/bill-schneider.7f045131/badges) | 9 | United States |
 |  | Erol Kavas | 9 | Canada |
-| #7 | Felipe Augusto | 8 | Brazil |
-|  | Parker Johnston | 8 | United States |
-| #9 | Danilo Perez | 7 | Brazil |
-|  | Joao Pedro Alexandre Vieira | 7 | Brazil |
+| #7 | [Felipe Augusto](https://www.credly.com/users/felipementel/badges) | 8 | Brazil |
+|  | [Parker Johnston](https://www.credly.com/users/parker-johnston/badges) | 8 | United States |
+| #9 | [Danilo Perez](https://www.credly.com/users/daniloperez/badges) | 7 | Brazil |
+|  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 7 | Brazil |
 
 ---
 

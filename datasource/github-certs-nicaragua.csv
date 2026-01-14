@@ -1,9 +1,9 @@
-first_name,middle_name,last_name,badge_count
-Leonel Absalon,,Blanco Castillo,1
-Eduardo,,Castillo,1
-Jerson,,Martinez,1
-Marconi,,Poveda,1
-Esmir Noel,,Roque Castellano,1
-Enmanuel,,Torres,1
-Karen,Vanessa,Torres,1
-Dewin,Alexander,Umaña,1
+first_name,middle_name,last_name,badge_count,profile_url
+Leonel Absalon,,Blanco Castillo,1,/users/leonel-absalon-blanco-castillo/badges
+Eduardo,,Castillo,1,/users/eduardo-castillo.e87df565/badges
+Jerson,,Martinez,1,/users/jerson-martinez.87719159/badges
+Marconi,,Poveda,1,/users/marconi-poveda/badges
+Esmir Noel,,Roque Castellano,1,/users/esmir-noel-roque-castellano/badges
+Enmanuel,,Torres,1,/users/enmanuel-torres.930a7267/badges
+Karen,Vanessa,Torres,1,/users/karen-torres.588d761d/badges
+Dewin,Alexander,Umaña,1,/users/dewinu/badges

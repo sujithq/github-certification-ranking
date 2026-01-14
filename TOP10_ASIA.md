@@ -1,23 +1,23 @@
 # 🌏 TOP 10 GitHub Certifications - Asia
 
-> Last updated: January 14, 2026 at 14:06 UTC
+> Last updated: January 14, 2026 at 15:12 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Country |
 |------|------|--------|---------|
-| 🥇 #1 | stephie Mercy | 14 | India |
-| 🥈 #2 | Emre Ozan Memis | 9 | Turkey |
-|  | Ramesh Kumar Dasari | 9 | India |
-| #4 | Niranjana K | 7 | India |
-|  | SWAPNIL DAMATE | 7 | India |
-| #6 | Akitaka Shinba | 6 | Japan |
-|  | Hoysala Garudanagiri | 6 | India |
-|  | Nagaraj Bhairaji | 6 | India |
-|  | NIKHIL GOWDA N | 6 | India |
-|  | Rajesh C N | 6 | India |
-|  | Santhosh NC | 6 | India |
-|  | Yuki Hattori | 6 | Japan |
+| 🥇 #1 | [stephie Mercy](https://www.credly.com/users/stephie-mercy/badges) | 14 | India |
+| 🥈 #2 | [Emre Ozan Memis](https://www.credly.com/users/emre-ozan-memis/badges) | 9 | Turkey |
+|  | [Ramesh Kumar Dasari](https://www.credly.com/users/ramesh-kumar.6071340e/badges) | 9 | India |
+| #4 | [Niranjana K](https://www.credly.com/users/niranjana-koni/badges) | 7 | India |
+|  | [SWAPNIL DAMATE](https://www.credly.com/users/swapnildamate/badges) | 7 | India |
+| #6 | [Akitaka Shinba](https://www.credly.com/users/akitaka-shinba/badges) | 6 | Japan |
+|  | [Hoysala Garudanagiri](https://www.credly.com/users/hoysala-garudanagiri/badges) | 6 | India |
+|  | [Nagaraj Bhairaji](https://www.credly.com/users/nagaraj-bhairaji/badges) | 6 | India |
+|  | [NIKHIL GOWDA N](https://www.credly.com/users/nikhil-gowda-n/badges) | 6 | India |
+|  | [Rajesh C N](https://www.credly.com/users/rajesh-c-n/badges) | 6 | India |
+|  | [Santhosh NC](https://www.credly.com/users/santhoshnc/badges) | 6 | India |
+|  | [Yuki Hattori](https://www.credly.com/users/yukihattori/badges) | 6 | Japan |
 
 ---
 

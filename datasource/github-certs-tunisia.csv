@@ -1,67 +1,67 @@
-first_name,middle_name,last_name,badge_count
-Med Fadi,,Abaidi,1
-Raed,,Affes,1
-Mohamed hedi,,Aissi,1
-Aziz,,Amari,1
-Mahran,,Amor,1
-M'hiri,,Arij,1
-Houssem,,Ayadi,1
-Mohamed Aziz,,Azzabi,1
-David,,BANITONGWA,1
-Anis,,Battikh,1
-Chemam,Mohamed,Bechir,1
-Souleimen,,Belhadj,1
-Aroua,,Ben Daya,1
-Mehdi,,Ben Hariz,1
-Aziz,,Ben Lamine,1
-Dhaker,,Ben Rejeb,1
-Oussama,,Ben Saied,1
-Nour,,Ben aissa,1
-Yousef,,Benarbia,1
-Sonia,,Bhiri,1
-Kais,,Bouafif,1
-Baha,,Bouali,1
-Jihed,,Bouazizi,1
-Firas,,Boudhraa,1
-Rostom,,Channouf,1
-Hichem,,Fantar,1
-Raslen,,Gzam,1
-Rihab,,Haddad,1
-Hamza,,Hadfi,2
-Jaafar,,Harabi,1
-Malek aziz,,Hassayoun,1
-Aymen,,Hmani,1
-Tmimi,,Ines,1
-Mohamed,,Jbeli,1
-Haythem,,Khiari,1
-Mohamed Ali,,Lafi,1
-Oussama,,MAHMOUD,1
-Iheb,,MANSOURI,1
-Chaari,,Mahmoud,1
-Aymen,,Majoul,1
-Mohamed Salah,,Mhiri,1
-Ammar,,Mohamed Amine,1
-Melki,,Mohamed Aziz,1
-Christian G.,,NANA,1
-Aymen,,Nasri,1
-Yassine,,RIAHI,1
-Anas,,Rabhi,1
-Hamza,,Rahal,1
-Karim,,Razgallah,1
-Seif eddine,,Rezgui,1
-Firas,,Ridene,1
-Jihed,,Saidani,1
-Tawfik,,Sallemi,1
-RANI,,ZOUAOUI,1
-Fradj,,Zayen,1
-maherzia,,belaazi,1
-souhail,,ben brik,1
-yasmine,,chebbi,1
-amine,,hamdi,1
-Mohamed Amine,,hlali,1
-wajdi,,kharroubi,1
-Houssem eddin,,khoildi,1
-randa,,maghraoui,1
-sofien,,meftahi,1
-boujnah,,salma,1
-Abdallah,,yessine kriaa,1
+first_name,middle_name,last_name,badge_count,profile_url
+Med Fadi,,Abaidi,1,/users/med-fadi-abaidi/badges
+Raed,,Affes,1,/users/raed-affes/badges
+Mohamed hedi,,Aissi,1,/users/mohamed-hedi-aissi/badges
+Aziz,,Amari,1,/users/aziz-amari.ca1ebf50/badges
+Mahran,,Amor,1,/users/mahran-amor/badges
+M'hiri,,Arij,1,/users/m-hiri-arij/badges
+Houssem,,Ayadi,1,/users/houssem-ayadi/badges
+Mohamed Aziz,,Azzabi,1,/users/mohamed-aziz-azzabi/badges
+David,,BANITONGWA,1,/users/david-banitongwa/badges
+Anis,,Battikh,1,/users/anis-battikh.f430eee1/badges
+Chemam,Mohamed,Bechir,1,/users/chemam-bechir/badges
+Souleimen,,Belhadj,1,/users/souleimen-belhadj/badges
+Aroua,,Ben Daya,1,/users/aroua-ben-daya/badges
+Mehdi,,Ben Hariz,1,/users/mehdi-ben-hariz/badges
+Aziz,,Ben Lamine,1,/users/aziz-ben-lamine/badges
+Dhaker,,Ben Rejeb,1,/users/brdhaker/badges
+Oussama,,Ben Saied,1,/users/oussama-ben-saied.32d2fd51/badges
+Nour,,Ben aissa,1,/users/nour-ben-aissa/badges
+Yousef,,Benarbia,1,/users/yousef-benarbia/badges
+Sonia,,Bhiri,1,/users/bhiri-sonia/badges
+Kais,,Bouafif,1,/users/kais-bouafif.923b6f03/badges
+Baha,,Bouali,1,/users/baha-bouali/badges
+Jihed,,Bouazizi,1,/users/jihed-bouazizi/badges
+Firas,,Boudhraa,1,/users/firas-boudhraa/badges
+Rostom,,Channouf,1,/users/rostomchannouf/badges
+Hichem,,Fantar,1,/users/hichem-fantar/badges
+Raslen,,Gzam,1,/users/raslen-gzam/badges
+Rihab,,Haddad,1,/users/rihab-haddad/badges
+Hamza,,Hadfi,2,/users/hamza-hadfi/badges
+Jaafar,,Harabi,1,/users/jaafar-harabi.2263a0b1/badges
+Malek aziz,,Hassayoun,1,/users/malek-aziz-hassayoun/badges
+Aymen,,Hmani,1,/users/thelime1/badges
+Tmimi,,Ines,1,/users/tmimi-ines.84700c90/badges
+Mohamed,,Jbeli,1,/users/mohamed-jbeli.cb4bde45/badges
+Haythem,,Khiari,1,/users/haythem-khiari/badges
+Mohamed Ali,,Lafi,1,/users/mohamed-ali-lafi.bffb4dbf/badges
+Oussama,,MAHMOUD,1,/users/oussama-mahmoud.cbfabf05/badges
+Iheb,,MANSOURI,1,/users/iheb-mansouri/badges
+Chaari,,Mahmoud,1,/users/chaari-mahmoud/badges
+Aymen,,Majoul,1,/users/aymen-majoul/badges
+Mohamed Salah,,Mhiri,1,/users/mohamed-salah-mhiri.bcd289c3/badges
+Ammar,,Mohamed Amine,1,/users/ammar-mohamed-amine/badges
+Melki,,Mohamed Aziz,1,/users/melki-mohamed-aziz/badges
+Christian G.,,NANA,1,/users/christian-g-nana/badges
+Aymen,,Nasri,1,/users/aymen-nasri.067d1995/badges
+Yassine,,RIAHI,1,/users/yassine-riahi.4e323dd4/badges
+Anas,,Rabhi,1,/users/anas-rabhi/badges
+Hamza,,Rahal,1,/users/hamza-rahal.abbfc40e/badges
+Karim,,Razgallah,1,/users/karim-razgallah/badges
+Seif eddine,,Rezgui,1,/users/seif-eddine-rezgui/badges
+Firas,,Ridene,1,/users/firas-ridene/badges
+Jihed,,Saidani,1,/users/jihed-saidani.5e28b3eb/badges
+Tawfik,,Sallemi,1,/users/tawfik-sallami/badges
+RANI,,ZOUAOUI,1,/users/rani-zouaoui/badges
+Fradj,,Zayen,1,/users/fradj-zayen/badges
+maherzia,,belaazi,1,/users/maherzia-belaazi.7637e258/badges
+souhail,,ben brik,1,/users/souhail-ben-brik.41baca17/badges
+yasmine,,chebbi,1,/users/yasmine-chebbi.64abfbb7/badges
+amine,,hamdi,1,/users/amine-hamdi.f96b5e3a/badges
+Mohamed Amine,,hlali,1,/users/mohamed-amine-hlali/badges
+wajdi,,kharroubi,1,/users/wajdi-kharroubi.9c6a1e2c/badges
+Houssem eddin,,khoildi,1,/users/houssem-eddin-khoildi/badges
+randa,,maghraoui,1,/users/randa-maghraoui/badges
+sofien,,meftahi,1,/users/sofien-meftahi.89021a1a/badges
+boujnah,,salma,1,/users/boujnah-salma/badges
+Abdallah,,yessine kriaa,1,/users/abdallah-yessine-kriaa/badges

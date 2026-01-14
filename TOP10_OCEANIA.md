@@ -1,6 +1,6 @@
 # 🌊 TOP 10 GitHub Certifications - Oceania
 
-> Last updated: January 14, 2026 at 14:06 UTC
+> Last updated: January 14, 2026 at 15:12 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -8,10 +8,10 @@
 |------|------|--------|---------|
 | 🥇 #1 | Marco Celon | 12 | Australia |
 | 🥈 #2 | Andre Kolodochka | 5 | Australia |
-|  | Ben Hollamby | 5 | New Zealand |
+|  | [Ben Hollamby](https://www.credly.com/users/ben-hollamby/badges) | 5 | New Zealand |
 |  | Felix Gozali | 5 | Australia |
-|  | Hao Chen | 5 | New Zealand |
-|  | Jerome Brown | 5 | New Zealand |
+|  | [Hao Chen](https://www.credly.com/users/hao-chen.c4b252a3/badges) | 5 | New Zealand |
+|  | [Jerome Brown](https://www.credly.com/users/owretch/badges) | 5 | New Zealand |
 |  | Maxim Mazurok | 5 | Australia |
 |  | Sebastian Peter | 5 | Australia |
 |  | Stuart Eggerton | 5 | Australia |
@@ -25,7 +25,7 @@
 |  | Khurram Shahzad | 4 | Australia |
 |  | Kitty Chiu | 4 | Australia |
 |  | Madhav Lakshminarayanan | 4 | Australia |
-|  | Matt Duguid | 4 | New Zealand |
+|  | [Matt Duguid](https://www.credly.com/users/mattduguid/badges) | 4 | New Zealand |
 |  | Ronald Pai | 4 | Australia |
 |  | Sayali Chavan | 4 | Australia |
 |  | shruti Singh | 4 | Australia |

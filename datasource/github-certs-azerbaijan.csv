@@ -1,5 +1,5 @@
-first_name,middle_name,last_name,badge_count
-Kanan,,Abdulov,1
-Günel,,Aghakishiyeva,1
-Elvin Luis,,Sadiqov,1
-Elvin,,Suleymanov,1
+first_name,middle_name,last_name,badge_count,profile_url
+Kanan,,Abdulov,1,/users/kanan-abdulov/badges
+Günel,,Aghakishiyeva,1,/users/gunel-aghakishiyeva/badges
+Elvin Luis,,Sadiqov,1,/users/elvin-luis-sadiqov/badges
+Elvin,,Suleymanov,1,/users/elvin-suleymanov/badges

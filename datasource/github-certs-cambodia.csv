@@ -1,4 +1,4 @@
-first_name,middle_name,last_name,badge_count
-Hok,,Kimlong,1
-Korng,,Samnang,1
-Songleanghaov,,Sreng,1
+first_name,middle_name,last_name,badge_count,profile_url
+Hok,,Kimlong,1,/users/hokkimlong/badges
+Korng,,Samnang,1,/users/korngsamnang/badges
+Songleanghaov,,Sreng,1,/users/songleanghaov.sreng/badges

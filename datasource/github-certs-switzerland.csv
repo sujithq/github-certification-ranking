@@ -1,60 +1,60 @@
-first_name,middle_name,last_name,badge_count
-André,,Aebersold,1
-Oskar,Malte,Arden,2
-Michele,,Blum,1
-Lazar Marian,,Brostean,1
-Philippe,,Bürgisser,1
-Silvana,,Cabellos,1
-Antoine,,Combremont,2
-Flavia,,Conti Rossini,1
-Tobias,,Denzler,2
-Andres,,Duebi,1
-Marcel Alexandre,,Fenerich,1
-Jorge,,Ferrando,2
-Christophe,,Fund,1
-Aymen,,Furter,2
-Darren,,Glasper,1
-Achim,,Grolimund,2
-Alberto,,Hernandez,4
-Chris,,Huang,1
-Łukasz,,Kajstura,1
-Berkay,,Kaya,1
-Zahhar,,Kirillov,1
-Tobias,,Kluge,1
-Antonios,,Koskinas,1
-Jan,,Kott,1
-Clemens,,Lange,2
-Alessandro,,Langone,2
-Adrien,,Le Doussal,1
-Le Hoang Bach,,Le,3
-Thanh-Nu,,Leroy,1
-Severin,,Lindenmann,1
-Gelu,,Liuta,2
-Iván,,Lorenci de Francisco,1
-Sven,,Lüders,1
-Lucas,,Martins,1
-Daniel,,Meppiel,3
-Michael,,Montana,1
-Justin,Iven,Müller,1
-Adrian,,Neacau,1
-Benjamin,,O'Sullivan,4
-Ana,,Pedra,1
-Niccolò,,Quattropani,1
-Aaron,,Ritter,2
-Marc,,Rufer,4
-Daniel,,Rüegsegger,1
-Philipp,,Rüegsegger,1
-Eliise,,S,1
-Alex,,Sachelarescu,1
-David,,Schmid,1
-Stefan,,Schmid,1
-Jasper Michel,,Schröder,1
-Oleksii,,Shcherbak,1
-Sanjay,,Singh,1
-Michel,,Stadelmann,1
-Pascal,,Stalder,1
-Charlize,,Vogelsinger,1
-Thomas,,Wechsler,1
-Zi,,Ye,1
-Matteo,,Zamori,1
-Marco,,Zemp,1
+first_name,middle_name,last_name,badge_count,profile_url
+André,,Aebersold,1,/users/andre-aebersold/badges
+Oskar,Malte,Arden,2,/users/oskar-dorfler/badges
+Michele,,Blum,1,/users/micheleblum/badges
+Lazar Marian,,Brostean,1,/users/lazar-marian-brostean/badges
+Philippe,,Bürgisser,1,/users/philippe-burgisser.0ad83487/badges
+Silvana,,Cabellos,1,/users/silvana-cabellos.fc665e7e/badges
+Antoine,,Combremont,2,/users/antoine-combremont/badges
+Flavia,,Conti Rossini,1,/users/flaviacontirossini/badges
+Tobias,,Denzler,2,/users/tobias-denzler/badges
+Andres,,Duebi,1,/users/andres-duebi/badges
+Marcel Alexandre,,Fenerich,1,/users/marcel-alexandre-fenerich.e6fe2a74/badges
+Jorge,,Ferrando,2,/users/jorge-ferrando/badges
+Christophe,,Fund,1,/users/cfund/badges
+Aymen,,Furter,2,/users/aymen-furter/badges
+Darren,,Glasper,1,/users/darren-glasper/badges
+Achim,,Grolimund,2,/users/achim-grolimund/badges
+Alberto,,Hernandez,4,/users/alberto-hernandez.506ad9c8/badges
+Chris,,Huang,1,/users/chris-huang/badges
+Łukasz,,Kajstura,1,/users/lukasz-kajstura/badges
+Berkay,,Kaya,1,/users/berkay-kaya.2e284bae/badges
+Zahhar,,Kirillov,1,/users/zahhar/badges
+Tobias,,Kluge,1,/users/tobias-kluge.3876fd15/badges
+Antonios,,Koskinas,1,/users/antonios-koskinas/badges
+Jan,,Kott,1,/users/janusch2/badges
+Clemens,,Lange,2,/users/clemens-lange/badges
+Alessandro,,Langone,2,/users/alessandro-langone.14843130/badges
+Adrien,,Le Doussal,1,/users/adrien-le-doussal/badges
+Le Hoang Bach,,Le,3,/users/le-hoang-bach-le/badges
+Thanh-Nu,,Leroy,1,/users/thanh-nu-leroy/badges
+Severin,,Lindenmann,1,/users/severin-lindenmann.be32642c/badges
+Gelu,,Liuta,2,/users/gelu-liuta/badges
+Iván,,Lorenci de Francisco,1,/users/ivan-lorenci-de-francisco/badges
+Sven,,Lüders,1,/users/sven-lueders/badges
+Lucas,,Martins,1,/users/lucas-martins.c9341fc0/badges
+Daniel,,Meppiel,3,/users/daniel-meppiel/badges
+Michael,,Montana,1,/users/michael-montana/badges
+Justin,Iven,Müller,1,/users/justiniven/badges
+Adrian,,Neacau,1,/users/adrian-neacau/badges
+Benjamin,,O'Sullivan,4,/users/benjamin-o-sullivan/badges
+Ana,,Pedra,1,/users/ana-pedra/badges
+Niccolò,,Quattropani,1,/users/niccolo-quattropani/badges
+Aaron,,Ritter,2,/users/aaron-ritter.49a316a2/badges
+Marc,,Rufer,4,/users/marc-rufer/badges
+Daniel,,Rüegsegger,1,/users/daniel-ruegsegger/badges
+Philipp,,Rüegsegger,1,/users/philipp-ruegsegger/badges
+Eliise,,S,1,/users/eliise-s/badges
+Alex,,Sachelarescu,1,/users/alex-sachelarescu/badges
+David,,Schmid,1,/users/david-schmid.b2083e96/badges
+Stefan,,Schmid,1,/users/sschmid/badges
+Jasper Michel,,Schröder,1,/users/jasper-michel-schroder/badges
+Oleksii,,Shcherbak,1,/users/oleksii-shcherbak/badges
+Sanjay,,Singh,1,/users/san360/badges
+Michel,,Stadelmann,1,/users/michel-stadelmann/badges
+Pascal,,Stalder,1,/users/pascal-stalder/badges
+Charlize,,Vogelsinger,1,/users/xyzcha/badges
+Thomas,,Wechsler,1,/users/thomas-wechsler/badges
+Zi,,Ye,1,/users/zi-ye.a3e42646/badges
+Matteo,,Zamori,1,/users/matteo-zamori/badges
+Marco,,Zemp,1,/users/marco-zemp/badges

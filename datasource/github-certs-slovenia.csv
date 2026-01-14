@@ -1,5 +1,5 @@
-first_name,middle_name,last_name,badge_count
-Domen,,Gricar,1
-Uros,,Kastelic,3
-Luka,,Nikolic,1
-Matevž Borjan,,Zorec,1
+first_name,middle_name,last_name,badge_count,profile_url
+Domen,,Gricar,1,/users/domen-gricar/badges
+Uros,,Kastelic,3,/users/uros-kastelic/badges
+Luka,,Nikolic,1,/users/luka-nikolic.d76aa1be/badges
+Matevž Borjan,,Zorec,1,/users/matevz-borjan-zorec/badges

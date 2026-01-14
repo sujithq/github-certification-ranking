@@ -1,9 +1,9 @@
-first_name,middle_name,last_name,badge_count
-Lucas,,Ausquiz,1
-Edgardo,,Crovetto,1
-Camilo,Iván,Ferreira,1
-Alexander Lázaro,,Gómez Valdivia,2
-Karthick,,Manipallavan,1
-Lucia,,Muñoz,1
-Franco,,Robotti,1
-Pablo,,Rubianes,1
+first_name,middle_name,last_name,badge_count,profile_url
+Lucas,,Ausquiz,1,/users/lucas-ausquiz/badges
+Edgardo,,Crovetto,1,/users/edgardo-crovetto/badges
+Camilo,Iván,Ferreira,1,/users/camilo-ferreira.b4872ded/badges
+Alexander Lázaro,,Gómez Valdivia,2,/users/alexander-lazaro-gomez-valdivia/badges
+Karthick,,Manipallavan,1,/users/karthick-manipallavan/badges
+Lucia,,Muñoz,1,/users/lucia-munoz.95314636/badges
+Franco,,Robotti,1,/users/franco-robotti.e8c870ef/badges
+Pablo,,Rubianes,1,/users/pablo-rubianes.86ca2a37/badges

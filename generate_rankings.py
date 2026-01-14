@@ -9,6 +9,7 @@ import csv
 import glob
 import json
 import os
+import requests
 from collections import defaultdict
 from datetime import datetime
 
@@ -96,6 +97,30 @@ def get_continent(country_name):
     """Get continent from country name"""
     country_lower = country_name.lower().replace('-', ' ')
     return CONTINENT_MAP.get(country_lower, 'Unknown')
+
+def fetch_user_company(profile_url):
+    """Fetch company name from user profile"""
+    if not profile_url:
+        return ''
+    
+    try:
+        # Extract username from profile_url (/users/username/badges)
+        username = profile_url.split('/')[2] if '/users/' in profile_url else ''
+        if not username:
+            return ''
+        
+        # Fetch user profile with JSON header
+        url = f"https://www.credly.com/users/{username}"
+        headers = {'Accept': 'application/json'}
+        response = requests.get(url, headers=headers, timeout=5)
+        response.raise_for_status()
+        data = response.json()
+        
+        # Extract company name
+        company = data.get('data', {}).get('current_organization_name', '')
+        return company if company else ''
+    except:
+        return ''
 
 def load_metadata():
     """Load CSV metadata"""
@@ -213,6 +238,12 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
             # No more users to include
             break
     
+    # Fetch company information for ranked users
+    print(f"  Fetching company info for {len(top_users)} ranked users...")
+    for rank, user in top_users:
+        company = fetch_user_company(user.get('profile_url', ''))
+        user['company'] = company
+    
     # Get outdated CSVs
     outdated = get_outdated_csvs()
     
@@ -223,8 +254,8 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
-| Rank | Name | Badges | Country |
-|------|------|--------|---------|
+| Rank | Name | Badges | Company | Country |
+|------|------|--------|---------|---------|
 """
     
     prev_rank = None
@@ -244,7 +275,8 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
             profile_url = f"https://www.credly.com{user['profile_url']}"
             name_display = f"[{user['name']}]({profile_url})"
         
-        content += f"| {rank_display} | {name_display} | {user['badges']} | {user['country']} |\n"
+        company_display = user.get('company', '')
+        content += f"| {rank_display} | {name_display} | {user['badges']} | {company_display} | {user['country']} |\n"
         prev_rank = rank
     
     # Add statistics

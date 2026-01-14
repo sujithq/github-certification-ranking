@@ -1,6 +1,6 @@
 # 🇧🇷 TOP 10 GitHub Certifications - Brazil
 
-> Last updated: January 14, 2026 at 16:47 UTC
+> Last updated: January 14, 2026 at 17:19 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -12,7 +12,7 @@
 |  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 7 | Avanade | Brazil |
 | #5 | [Francisco Nascimento](https://www.credly.com/users/francisco-nascimento.f7a5a9f3/badges) | 6 |  | Brazil |
 |  | [Mateus Lenhart](https://www.credly.com/users/mateus-lenhart/badges) | 6 |  | Brazil |
-| #7 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 5 |  | Brazil |
+| #7 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 5 | Avanade Brasil | Brazil |
 |  | [Beatriz Matsui](https://www.credly.com/users/beatriz-matsui/badges) | 5 | Microsoft | Brazil |
 |  | [Christiano Martins Milfont Almeida](https://www.credly.com/users/cmilfont/badges) | 5 | Accenture | Brazil |
 |  | [Diego Giglioli](https://www.credly.com/users/diego-giglioli.bb64eaa5/badges) | 5 |  | Brazil |
@@ -23,7 +23,7 @@
 |  | [Jailton Santos Sales Junior](https://www.credly.com/users/jailton-santos-sales-junior/badges) | 5 | Microsoft | Brazil |
 |  | [Juliano Dziadzio](https://www.credly.com/users/juliano-dziadzio.5cdefb9f/badges) | 5 |  | Brazil |
 |  | [Rafael Silva Willians](https://www.credly.com/users/rafael-silva-willians/badges) | 5 |  | Brazil |
-|  | [William Zonta](https://www.credly.com/users/william-zonta.d8c69de2/badges) | 5 |  | Brazil |
+|  | [William Zonta](https://www.credly.com/users/william-zonta.d8c69de2/badges) | 5 | Optima Latam | Brazil |
 
 ---
 

@@ -378,6 +378,14 @@ def main():
         lambda u: u['continent'] == 'Asia'
     )
     
+    # Generate TOP 10 Africa
+    generate_markdown_top10(
+        users,
+        "🌍 TOP 10 GitHub Certifications - Africa",
+        "TOP10_AFRICA.md",
+        lambda u: u['continent'] == 'Africa'
+    )
+    
     # Generate TOP 10 Oceania
     generate_markdown_top10(
         users,

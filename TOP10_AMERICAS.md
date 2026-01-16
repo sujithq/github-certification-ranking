@@ -1,6 +1,6 @@
 # 🌎 TOP 10 GitHub Certifications - Americas
 
-> Last updated: January 16, 2026 at 17:05 UTC
+> Last updated: January 16, 2026 at 18:41 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -13,7 +13,7 @@
 |  | [John Wildes](https://www.credly.com/users/john-wildes/badges) | 11 |  | United States |
 | #6 | [Benjamin Marsteau](https://www.credly.com/users/bmarsteau/badges) | 10 | Onepoint | Canada |
 |  | [Francisco Nascimento](https://www.credly.com/users/francisco-nascimento.f7a5a9f3/badges) | 10 | Avanade | Brazil |
-|  | [luana Vieira](https://www.credly.com/users/luana-vieira.36aca490/badges) | 10 |  | Brazil |
+|  | [Luana Corrêa Vieira](https://www.credly.com/users/luana-vieira.36aca490/badges) | 10 | Avanade | Brazil |
 | #9 | [Bill Schneider](https://www.credly.com/users/bill-schneider.7f045131/badges) | 9 |  | United States |
 |  | [Erol Kavas](https://www.credly.com/users/erol/badges) | 9 | PwC | Canada |
 
@@ -21,8 +21,8 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 6,767
-- **Total Badges Earned**: 8,560
+- **Total Certified Users**: 6,775
+- **Total Badges Earned**: 8,568
 - **Average Badges per User**: 1.26
 - **Highest Badge Count**: 14
 

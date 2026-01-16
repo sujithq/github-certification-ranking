@@ -1,6 +1,6 @@
 # 🇧🇷 TOP 10 GitHub Certifications - Brazil
 
-> Last updated: January 16, 2026 at 17:05 UTC
+> Last updated: January 16, 2026 at 18:41 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -10,14 +10,14 @@
 |  | [Felipe Augusto](https://www.credly.com/users/felipementel/badges) | 14 | Avanade | Brazil |
 | 🥉 #3 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 11 | Avanade | Brazil |
 | #4 | [Francisco Nascimento](https://www.credly.com/users/francisco-nascimento.f7a5a9f3/badges) | 10 | Avanade | Brazil |
-|  | [luana Vieira](https://www.credly.com/users/luana-vieira.36aca490/badges) | 10 |  | Brazil |
+|  | [Luana Corrêa Vieira](https://www.credly.com/users/luana-vieira.36aca490/badges) | 10 | Avanade | Brazil |
 | #6 | [Danilo Perez](https://www.credly.com/users/daniloperez/badges) | 7 |  | Brazil |
 |  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 7 | Avanade | Brazil |
-| #8 | [Leonardo Vizagre](https://www.credly.com/users/leonardo.vizagre/badges) | 6 | Avanade Brasil | Brazil |
+| #8 | [Leonardo Vizagre](https://www.credly.com/users/leonardo.vizagre/badges) | 6 | Avanade | Brazil |
 |  | [Mateus Lenhart](https://www.credly.com/users/mateus-lenhart/badges) | 6 | ilegra | Brazil |
 | #10 | [Beatriz Matsui](https://www.credly.com/users/beatriz-matsui/badges) | 5 | Microsoft | Brazil |
 |  | [Christiano Martins Milfont Almeida](https://www.credly.com/users/cmilfont/badges) | 5 | Accenture | Brazil |
-|  | [Clayton Souza](https://www.credly.com/users/clayton-souza/badges) | 5 | Avanade | Brazil |
+|  | [Clayton Rodrigues Souza](https://www.credly.com/users/clayton-souza/badges) | 5 | Avanade | Brazil |
 |  | [Diego Giglioli](https://www.credly.com/users/diego-giglioli.bb64eaa5/badges) | 5 |  | Brazil |
 |  | [Ednei Monteiro](https://www.credly.com/users/ednei-monteiro/badges) | 5 | Microsoft | Brazil |
 |  | [Eduarda Costa da Silva](https://www.credly.com/users/eduarda-costa-da-silva/badges) | 5 | ilegra | Brazil |

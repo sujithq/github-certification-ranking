@@ -1,13 +1,13 @@
 # 🌍 TOP 10 GitHub Certifications - Africa
 
-> Last updated: January 27, 2026 at 01:55 UTC
+> Last updated: January 27, 2026 at 17:20 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Company | Country |
 |------|------|--------|---------|---------|
-| 🥇 #1 | [Enoch Nii Lante France](https://www.credly.com/users/enoch-nii-lante-france/badges) | 9 | Cloudware Africa | Ghana |
-| 🥈 #2 | [Promise Igbo](https://www.credly.com/users/promise-igbo/badges) | 7 | Reliance Infosystems Limited | Nigeria |
+| 🥇 #1 | [Promise Igbo](https://www.credly.com/users/promise-igbo/badges) | 10 | Reliance Infosystems Limited | Nigeria |
+| 🥈 #2 | [Enoch Nii Lante France](https://www.credly.com/users/enoch-nii-lante-france/badges) | 9 | Cloudware Africa | Ghana |
 | 🥉 #3 | [Hezekiah Ogundele](https://www.credly.com/users/hezekiah-ogundele/badges) | 5 |  | Nigeria |
 |  | [Jude Igwe](https://www.credly.com/users/jude-igwe.d9545592/badges) | 5 |  | Nigeria |
 |  | [Obaro Olori](https://www.credly.com/users/obaro-olori.97a0b7b9/badges) | 5 |  | Nigeria |
@@ -26,9 +26,9 @@
 ## 📊 Statistics
 
 - **Total Certified Users**: 1,162
-- **Total Badges Earned**: 1,357
+- **Total Badges Earned**: 1,360
 - **Average Badges per User**: 1.17
-- **Highest Badge Count**: 9
+- **Highest Badge Count**: 10
 
 ---
 

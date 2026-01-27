@@ -1,6 +1,6 @@
 # 🌏 TOP 10 GitHub Certifications - Asia
 
-> Last updated: January 27, 2026 at 18:18 UTC
+> Last updated: January 27, 2026 at 18:34 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -16,14 +16,15 @@
 |  | [Akitaka Shinba](https://www.credly.com/users/akitaka-shinba/badges) | 6 | オルターブース | Japan |
 |  | [Nagaraj Bhairaji](https://www.credly.com/users/nagaraj-bhairaji/badges) | 6 |  | India |
 |  | [NIKHIL GOWDA N](https://www.credly.com/users/nikhil-gowda-n/badges) | 6 |  | India |
+|  | [Santhosh NC](https://www.credly.com/users/santhoshnc/badges) | 6 | Thoughtworks | India |
 |  | [Shiva Sagar M](https://www.credly.com/users/shiva-sagar-m.9963b9a5/badges) | 6 |  | India |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 12,183
-- **Total Badges Earned**: 14,301
+- **Total Certified Users**: 12,189
+- **Total Badges Earned**: 14,320
 - **Average Badges per User**: 1.17
 - **Highest Badge Count**: 14
 

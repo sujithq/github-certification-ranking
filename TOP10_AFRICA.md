@@ -1,6 +1,6 @@
 # 🌍 TOP 10 GitHub Certifications - Africa
 
-> Last updated: January 27, 2026 at 17:20 UTC
+> Last updated: January 27, 2026 at 18:18 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -13,21 +13,20 @@
 |  | [Obaro Olori](https://www.credly.com/users/obaro-olori.97a0b7b9/badges) | 5 |  | Nigeria |
 |  | [Olatunji Samson](https://www.credly.com/users/olatunji-pelz-samson/badges) | 5 |  | Nigeria |
 |  | [OluDayo Orunsolu](https://www.credly.com/users/dayo777/badges) | 5 |  | Nigeria |
-|  | [Paul Wechuli](https://www.credly.com/users/paul-wechuli/badges) | 5 |  | Kenya |
 |  | [Taofeeq Adeoye Bello](https://www.credly.com/users/taofeeq-bello.110ee8a5/badges) | 5 |  | Nigeria |
-| #10 | [Ali Heikal](https://www.credly.com/users/aliheikal/badges) | 4 |  | Egypt |
+| #9 | [Ali Heikal](https://www.credly.com/users/aliheikal/badges) | 4 |  | Egypt |
 |  | [Carike Blignaut-Staden](https://www.credly.com/users/carike/badges) | 4 | OUTsurance | South Africa |
 |  | [Fred Nyakagwa](https://www.credly.com/users/fred-nyakagwa/badges) | 4 |  | Kenya |
-|  | [Maureen Oki](https://www.credly.com/users/maureen-oki/badges) | 4 |  | Nigeria |
+|  | [Paul Wechuli](https://www.credly.com/users/paul-wechuli/badges) | 4 |  | Kenya |
 |  | [TIMILEHIN ADEFARE](https://www.credly.com/users/timilehin-adefare.5fbf51df/badges) | 4 | Tek Experts Nigeria Limited | Nigeria |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 1,162
-- **Total Badges Earned**: 1,360
-- **Average Badges per User**: 1.17
+- **Total Certified Users**: 1,158
+- **Total Badges Earned**: 1,342
+- **Average Badges per User**: 1.16
 - **Highest Badge Count**: 10
 
 ---

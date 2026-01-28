@@ -26,7 +26,7 @@ def is_badge_expired(expires_at_date):
         return False
 
 def fetch_github_external_badges(user_id):
-    """Fetch GitHub external badges (Microsoft-issued) for a user, excluding expired ones"""
+    """Fetch GitHub external badges (Microsoft-issued) for a user, excluding expired ones and duplicates"""
     url = f"https://www.credly.com/api/v1/users/{user_id}/external_badges/open_badges/public?page=1&page_size=48"
     
     try:
@@ -34,8 +34,8 @@ def fetch_github_external_badges(user_id):
         response.raise_for_status()
         data = response.json()
         
-        # Filter only GitHub badges issued by Microsoft that are not expired
-        valid_github_badges = 0
+        # Use set to track unique badge names and avoid duplicates
+        unique_badge_names = set()
         for badge in data.get('data', []):
             external_badge = badge.get('external_badge', {})
             badge_name = external_badge.get('badge_name', '')
@@ -45,17 +45,19 @@ def fetch_github_external_badges(user_id):
             # Check if it's a GitHub certification issued by Microsoft and not expired
             if issuer_name == 'Microsoft' and 'GitHub' in badge_name:
                 if not is_badge_expired(expires_at_date):
-                    valid_github_badges += 1
+                    # Only count if badge name is unique
+                    unique_badge_names.add(badge_name)
         
-        return valid_github_badges
+        return len(unique_badge_names)
     except Exception as e:
         # If external badges endpoint fails, return 0 (user may have no external badges)
         print(f"    ⚠️  Warning: Failed to fetch external badges for user {user_id}: {str(e)}")
         return 0
 
 def fetch_github_org_badges(user_id):
-    """Fetch GitHub badges issued directly by GitHub org, excluding expired ones"""
-    valid_badges = 0
+    """Fetch GitHub badges issued directly by GitHub org, excluding expired ones and duplicates"""
+    # Use set to track unique badge names and avoid duplicates
+    unique_badge_names = set()
     page = 1
     
     try:
@@ -85,7 +87,11 @@ def fetch_github_org_badges(user_id):
                 if is_github_org:
                     expires_at_date = badge.get('expires_at_date')
                     if not is_badge_expired(expires_at_date):
-                        valid_badges += 1
+                        # Get badge name and only count if unique
+                        badge_template = badge.get('badge_template', {})
+                        badge_name = badge_template.get('name', '')
+                        if badge_name:
+                            unique_badge_names.add(badge_name)
             
             page += 1
             
@@ -93,7 +99,7 @@ def fetch_github_org_badges(user_id):
             if page > 10:
                 break
         
-        return valid_badges
+        return len(unique_badge_names)
     except Exception as e:
         # If badges endpoint fails, return 0
         print(f"    ⚠️  Warning: Failed to fetch org badges for user {user_id}: {str(e)}")

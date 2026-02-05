@@ -45,6 +45,7 @@ def extract_share_id(mslearn_url):
     
     Examples:
     - https://learn.microsoft.com/en-us/users/jessehouwing-1848/transcript/share/d5gza1z690gp607
+    - https://learn.microsoft.com/en-us/users/rbos/transcript/dgg4f96x3lkzp9d
     - https://learn.microsoft.com/api/profiles/transcript/share/d5gza1z690gp607?locale=en-us
     - https://learn.microsoft.com/api/profiles/transcript/share/d5gza1z690gp607?WT.mc_id=DOP-MVP-5001511
     - d5gza1z690gp607
@@ -59,9 +60,16 @@ def extract_share_id(mslearn_url):
     # Remove any query parameters first
     base_url = mslearn_url.split('?')[0]
     
-    # Extract share ID from URL
+    # Extract share ID from URL with /share/
     if '/share/' in base_url:
         parts = base_url.split('/share/')
+        if len(parts) == 2:
+            share_id = parts[1].split('/')[0]
+            return share_id if share_id else None
+    
+    # Extract share ID from URL with /transcript/{id} (without /share/)
+    if '/transcript/' in base_url:
+        parts = base_url.split('/transcript/')
         if len(parts) == 2:
             share_id = parts[1].split('/')[0]
             return share_id if share_id else None

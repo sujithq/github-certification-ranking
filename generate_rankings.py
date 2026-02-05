@@ -267,6 +267,7 @@ def read_all_csv_files(base_path):
                             last_name = row.get('last_name', '').strip('"').strip()
                             profile_url = row.get('profile_url', '').strip('"').strip()
                             mslearn_url = row.get('mslearn_url', '').strip('"').strip() if row.get('mslearn_url') else ''
+                            is_mvp = row.get('is_mvp', '').lower() == 'true'
                             
                             # Build full name
                             name_parts = [first_name]
@@ -282,7 +283,8 @@ def read_all_csv_files(base_path):
                                 'country': country_display,
                                 'continent': continent,
                                 'profile_url': profile_url,
-                                'mslearn_url': mslearn_url
+                                'mslearn_url': mslearn_url,
+                                'is_mvp': is_mvp
                             })
                     except (ValueError, KeyError):
                         continue
@@ -293,6 +295,71 @@ def read_all_csv_files(base_path):
     print(f"✅ Loaded {len(users)} users from all files")
     return users
 
+
+def update_csv_badge_counts(base_path):
+    """Update badge counts and MVP status in CSV files for users with MS Learn URLs.
+    
+    This merges Credly + MS Learn badges and writes the merged count + is_mvp back to CSV.
+    """
+    csv_files = glob.glob(os.path.join(base_path, 'datasource', 'github-certs-*.csv'))
+    updated_count = 0
+    
+    print(f"📊 Updating badge counts for users with MS Learn URLs...")
+    
+    for csv_file in csv_files:
+        rows = []
+        has_updates = False
+        
+        try:
+            # Read all rows
+            with open(csv_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                fieldnames = list(reader.fieldnames)
+                
+                # Ensure is_mvp column exists
+                if 'is_mvp' not in fieldnames:
+                    fieldnames.append('is_mvp')
+                
+                for row in reader:
+                    mslearn_url = row.get('mslearn_url', '').strip()
+                    profile_url = row.get('profile_url', '').strip()
+                    
+                    if mslearn_url:
+                        # Get merged badge count and MVP status
+                        merged_count, _, _, _, is_mvp = get_merged_badge_count(profile_url, mslearn_url)
+                        old_count = int(row.get('badge_count', 0))
+                        old_mvp = row.get('is_mvp', '').lower() == 'true'
+                        
+                        if merged_count != old_count or is_mvp != old_mvp:
+                            row['badge_count'] = str(merged_count)
+                            row['is_mvp'] = str(is_mvp)
+                            has_updates = True
+                            updated_count += 1
+                            country = os.path.basename(csv_file).replace('github-certs-', '').replace('.csv', '')
+                            mvp_str = " (MVP)" if is_mvp else ""
+                            print(f"    {row.get('first_name', '')} {row.get('last_name', '')} ({country}): {old_count} → {merged_count}{mvp_str}")
+                    else:
+                        # Ensure is_mvp column has a value even for non-mslearn users
+                        if 'is_mvp' not in row or not row.get('is_mvp'):
+                            row['is_mvp'] = ''
+                    
+                    rows.append(row)
+            
+            # Write back if there were updates
+            if has_updates:
+                with open(csv_file, 'w', encoding='utf-8', newline='') as f:
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
+                    writer.writerows(rows)
+        
+        except Exception as e:
+            print(f"⚠️  Error updating {csv_file}: {e}")
+            continue
+    
+    if updated_count > 0:
+        print(f"✅ Updated {updated_count} users with merged badge counts")
+    else:
+        print(f"✅ No badge count updates needed")
 def get_outdated_csvs():
     """Get list of CSVs that weren't updated in the last run"""
     metadata = load_metadata()
@@ -321,25 +388,6 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
         filtered_users = [u for u in users if filter_func(u)]
     else:
         filtered_users = users
-    
-    # FIRST: Update badge counts for ALL users with mslearn_url
-    # This ensures MS Learn certs are counted BEFORE sorting/ranking
-    mslearn_users = [u for u in filtered_users if u.get('mslearn_url')]
-    if mslearn_users:
-        print(f"  Merging Credly + MS Learn badges for {len(mslearn_users)} users with MS Learn URLs...")
-        for user in mslearn_users:
-            merged_count, credly_badges, mslearn_certs, mslearn_skills, is_mvp = get_merged_badge_count(
-                user.get('profile_url', ''),
-                user.get('mslearn_url', '')
-            )
-            user['credly_badges'] = list(credly_badges)
-            user['mslearn_certs'] = mslearn_certs
-            user['mslearn_skills'] = mslearn_skills
-            user['is_mvp'] = is_mvp
-            old_count = user['badges']
-            user['badges'] = merged_count
-            if merged_count != old_count:
-                print(f"    {user['name']}: {old_count} → {merged_count} (Credly={len(credly_badges)}, MS Learn certs={len(mslearn_certs)}, skills={len(mslearn_skills)})")
     
     # Sort by badges (descending) then by name (alphabetically)
     sorted_users = sorted(filtered_users, key=lambda x: (-x['badges'], x['name'].lower()))
@@ -376,6 +424,8 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
     for rank, user in top_users:
         company = fetch_user_company(user.get('profile_url', ''))
         user['company'] = company
+    
+    # Note: is_mvp is already loaded from CSV by read_all_csv_files()
     
     # Get outdated CSVs
     outdated = get_outdated_csvs()
@@ -482,7 +532,11 @@ def main():
     # Get base path
     base_path = os.path.dirname(os.path.abspath(__file__))
     
-    # Read all CSV files
+    # First, update badge counts in CSV files for users with MS Learn URLs
+    update_csv_badge_counts(base_path)
+    print()
+    
+    # Read all CSV files (now with updated badge counts)
     users = read_all_csv_files(base_path)
     
     if not users:

@@ -215,7 +215,7 @@ def save_to_csv(country, users, output_dir='datasource'):
     
     with open(output_file, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(['first_name', 'middle_name', 'last_name', 'badge_count', 'profile_url'])
+        writer.writerow(['first_name', 'middle_name', 'last_name', 'badge_count', 'profile_url', 'mslearn_url'])
         
         for user in users:
             writer.writerow([
@@ -223,7 +223,8 @@ def save_to_csv(country, users, output_dir='datasource'):
                 user.get('middle_name', ''),
                 user.get('last_name', ''),
                 user.get('badge_count', 0),
-                user.get('url', '')
+                user.get('url', ''),
+                user.get('mslearn_url', '')
             ])
     
     print(f"Saved to {output_file}")

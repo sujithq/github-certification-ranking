@@ -1,6 +1,6 @@
 # 🌏 TOP 10 GitHub Certifications - Asia
 
-> Last updated: February 05, 2026 at 02:05 UTC
+> Last updated: February 05, 2026 at 13:19 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -31,4 +31,8 @@
 
 ---
 
-*Data sourced from GitHub Certifications via Credly API*
+*Data sourced from GitHub Certifications via Credly API and Microsoft Learn*
+
+> <img src="images/mvp.svg" alt="Microsoft MVP" width="16" height="16"/> = Microsoft MVP
+>
+> 📚 = User has linked MS Learn transcript (may include additional GitHub certifications: GH-100, GH-200, GH-300, GH-400, GH-500 and Applied Skills)

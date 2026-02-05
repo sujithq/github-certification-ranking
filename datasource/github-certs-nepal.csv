@@ -1,37 +1,37 @@
-first_name,middle_name,last_name,badge_count,profile_url
-Nabin,,Acharya,1,/users/nabin-acharya.8ffe872f/badges
-Raj,,Acharya,1,/users/raj-acharya.42df66f9/badges
-Aayush,,Adhikari,1,/users/aayush-adhikari/badges
-Samman,,Aryal,1,/users/samman-aryal/badges
-Yunika,,Bajracharya,1,/users/yunika-bajracharya.50185c70/badges
-Sakshyam,,Baral,1,/users/sakshyam-baral/badges
-Rupesh,,Bhandari,1,/users/0xrpsh/badges
-Santosh,,Bhandari,1,/users/santosh-bhandari.59b932e5/badges
-Muna,,Bhattarai,1,/users/muna-bhattarai.5d784bd7/badges
-Suraj,,Bhattarai,2,/users/immrbhattarai/badges
-Elbort,,Bista,1,/users/elbort-bista/badges
-Prerana,,Blown Lama,1,/users/prerana-blown-lama/badges
-Swayam,,Dulal,1,/users/swayam-dulal/badges
-Subin,,Gyawali,1,/users/iamsubingyawali/badges
-Anup,,Kafle,1,/users/anup-kafle.8a8ec1c6/badges
-Dev Raj,,Khadka,1,/users/dev-raj-khadka/badges
-Deepak,,Nagarkoti,1,/users/ndeepak/badges
-Ashok,,Nath,1,/users/ashok_nath/badges
-Aayush,,Nepal,1,/users/aayush-nepal.b1f61d88/badges
-Bipan,,Neupane,1,/users/bipan-neupane.e2021f64/badges
-Abhishek,,Panthee,1,/users/abhishek-panthee/badges
-Banshaj,,Paudel,1,/users/banshaj-paudel/badges
-Firoj,,Paudel,1,/users/firoj-paudel/badges
-Sangam,,Paudel,1,/users/sangam-paudel/badges
-Shubham,,Pokhrel,1,/users/shubham-pokhrel/badges
-Bibek,,Rawat,1,/users/bibek-rawat.1d8d666f/badges
-MD,,Sameer,1,/users/iammdsameer/badges
-Om Prakash,,Sharma,1,/users/ompiepy/badges
-Aayush,,Shrestha,1,/users/aayustha/badges
-Nischal,,Shrestha,1,/users/nischal-shrestha.eef41524/badges
-Suresh,,Subedi,1,/users/suresh-subedi/badges
-Om,Prakash,Thakur,1,/users/omthakurofficial/badges
-3B,,Thakuri,1,/users/3b-thakuri/badges
-Ajesh,Sen,Thapa,1,/users/aj3sh/badges
-sudip,,karmacharya,1,/users/sudip-karmacharya/badges
-sufal,,kc,1,/users/sufal-kc/badges
+first_name,middle_name,last_name,badge_count,profile_url,mslearn_url
+Nabin,,Acharya,1,/users/nabin-acharya.8ffe872f/badges,
+Raj,,Acharya,1,/users/raj-acharya.42df66f9/badges,
+Aayush,,Adhikari,1,/users/aayush-adhikari/badges,
+Samman,,Aryal,1,/users/samman-aryal/badges,
+Yunika,,Bajracharya,1,/users/yunika-bajracharya.50185c70/badges,
+Sakshyam,,Baral,1,/users/sakshyam-baral/badges,
+Rupesh,,Bhandari,1,/users/0xrpsh/badges,
+Santosh,,Bhandari,1,/users/santosh-bhandari.59b932e5/badges,
+Muna,,Bhattarai,1,/users/muna-bhattarai.5d784bd7/badges,
+Suraj,,Bhattarai,2,/users/immrbhattarai/badges,
+Elbort,,Bista,1,/users/elbort-bista/badges,
+Prerana,,Blown Lama,1,/users/prerana-blown-lama/badges,
+Swayam,,Dulal,1,/users/swayam-dulal/badges,
+Subin,,Gyawali,1,/users/iamsubingyawali/badges,
+Anup,,Kafle,1,/users/anup-kafle.8a8ec1c6/badges,
+Dev Raj,,Khadka,1,/users/dev-raj-khadka/badges,
+Deepak,,Nagarkoti,1,/users/ndeepak/badges,
+Ashok,,Nath,1,/users/ashok_nath/badges,
+Aayush,,Nepal,1,/users/aayush-nepal.b1f61d88/badges,
+Bipan,,Neupane,1,/users/bipan-neupane.e2021f64/badges,
+Abhishek,,Panthee,1,/users/abhishek-panthee/badges,
+Banshaj,,Paudel,1,/users/banshaj-paudel/badges,
+Firoj,,Paudel,1,/users/firoj-paudel/badges,
+Sangam,,Paudel,1,/users/sangam-paudel/badges,
+Shubham,,Pokhrel,1,/users/shubham-pokhrel/badges,
+Bibek,,Rawat,1,/users/bibek-rawat.1d8d666f/badges,
+MD,,Sameer,1,/users/iammdsameer/badges,
+Om Prakash,,Sharma,1,/users/ompiepy/badges,
+Aayush,,Shrestha,1,/users/aayustha/badges,
+Nischal,,Shrestha,1,/users/nischal-shrestha.eef41524/badges,
+Suresh,,Subedi,1,/users/suresh-subedi/badges,
+Om,Prakash,Thakur,1,/users/omthakurofficial/badges,
+3B,,Thakuri,1,/users/3b-thakuri/badges,
+Ajesh,Sen,Thapa,1,/users/aj3sh/badges,
+sudip,,karmacharya,1,/users/sudip-karmacharya/badges,
+sufal,,kc,1,/users/sufal-kc/badges,

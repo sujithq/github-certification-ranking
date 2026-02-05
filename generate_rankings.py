@@ -3,6 +3,7 @@
 """
 GitHub Certifications Rankings Generator
 Generates TOP 10 rankings for Brazil, Americas, Europe, Asia, Oceania, and World
+Supports both Credly and MS Learn certification sources
 """
 
 import csv
@@ -12,6 +13,14 @@ import os
 import requests
 from collections import defaultdict
 from datetime import datetime
+
+# Import MS Learn badge fetching functionality
+try:
+    from fetch_mslearn_badges import fetch_mslearn_github_badges, extract_share_id
+    MSLEARN_AVAILABLE = True
+except ImportError:
+    MSLEARN_AVAILABLE = False
+    print("⚠️  MS Learn badge fetching not available (fetch_mslearn_badges.py not found)")
 
 # Continent mapping
 CONTINENT_MAP = {
@@ -154,6 +163,7 @@ def read_all_csv_files(base_path):
                             middle_name = row.get('middle_name', '').strip('"').strip()
                             last_name = row.get('last_name', '').strip('"').strip()
                             profile_url = row.get('profile_url', '').strip('"').strip()
+                            mslearn_url = row.get('mslearn_url', '').strip('"').strip() if row.get('mslearn_url') else ''
                             
                             # Build full name
                             name_parts = [first_name]
@@ -168,7 +178,8 @@ def read_all_csv_files(base_path):
                                 'badges': badge_count,
                                 'country': country_display,
                                 'continent': continent,
-                                'profile_url': profile_url
+                                'profile_url': profile_url,
+                                'mslearn_url': mslearn_url
                             })
                     except (ValueError, KeyError):
                         continue
@@ -244,6 +255,20 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
         company = fetch_user_company(user.get('profile_url', ''))
         user['company'] = company
     
+    # Fetch MS Learn badges for users with mslearn_url
+    if MSLEARN_AVAILABLE:
+        mslearn_users = [(rank, user) for rank, user in top_users if user.get('mslearn_url')]
+        if mslearn_users:
+            print(f"  Fetching MS Learn badges for {len(mslearn_users)} users with MS Learn URLs...")
+            for rank, user in mslearn_users:
+                mslearn_result = fetch_mslearn_github_badges(user['mslearn_url'])
+                user['mslearn_badges'] = mslearn_result.get('badge_count', 0)
+                user['mslearn_certs'] = mslearn_result.get('certifications', [])
+                user['mslearn_skills'] = mslearn_result.get('applied_skills', [])
+                user['is_mvp'] = mslearn_result.get('is_mvp', False)
+                if mslearn_result.get('error'):
+                    print(f"    ⚠️  MS Learn error for {user['name']}: {mslearn_result['error']}")
+    
     # Get outdated CSVs
     outdated = get_outdated_csvs()
     
@@ -274,6 +299,14 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
         if user.get('profile_url'):
             profile_url = f"https://www.credly.com{user['profile_url']}"
             name_display = f"[{user['name']}]({profile_url})"
+        
+        # Add MVP badge if user is a Microsoft MVP
+        if user.get('is_mvp'):
+            name_display += ' <img src="images/mvp.svg" alt="Microsoft MVP" width="16" height="16"/>'
+        
+        # Add MS Learn indicator if user has MS Learn profile
+        if user.get('mslearn_url'):
+            name_display += " 📚"
         
         company_display = user.get('company', '')
         content += f"| {rank_display} | {name_display} | {user['badges']} | {company_display} | {user['country']} |\n"
@@ -316,7 +349,13 @@ The following countries have data that was not updated in the last run:
         
         content += "\n---\n"
     
-    content += "\n*Data sourced from GitHub Certifications via Credly API*\n"
+    content += """
+*Data sourced from GitHub Certifications via Credly API and Microsoft Learn*
+
+> <img src="images/mvp.svg" alt="Microsoft MVP" width="16" height="16"/> = Microsoft MVP
+>
+> 📚 = User has linked MS Learn transcript (may include additional GitHub certifications: GH-100, GH-200, GH-300, GH-400, GH-500 and Applied Skills)
+"""
     
     # Write to file
     output_path = os.path.join(os.path.dirname(__file__), filename)

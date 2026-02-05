@@ -1,41 +1,41 @@
-first_name,middle_name,last_name,badge_count,profile_url
-Ahmed,,Abdelfattah,1,/users/ahmed-abdelfattah.2f89de0b/badges
-Mohammad,,Abu-Khader,1,/users/mohammad-abukhader/badges
-Mushtaq,,Ahmad,1,/users/mushtaq-ahmad.0f444749/badges
-Md Nasim,,Akhtar,1,/users/md-nasim-akhtar.2baf402f/badges
-Mohamed,,Al Ajlani,1,/users/mohamed-al-ajlani/badges
-Mahfouz,,Alaghbar,1,/users/mahfouz-alaghbar/badges
-Muhammad,,Ali,4,/users/muhammadallee/badges
-Nihil,,Babu,1,/users/nihil-babu.31cf159d/badges
-Jasim,,Basheer,1,/users/jasim-basheer/badges
-Salman,,Haider,1,/users/salman-haider.71f3b0d8/badges
-Mohammad,,Hassan,1,/users/mohammad-hassan.4236d264/badges
-Hosam,,Kamel,0,/users/hosamkamel/badges
-Rasul Ahmed,,Khan,1,/users/rasul-ahmed-khan.4a429b5f/badges
-Mohammed,,Mahgoub,1,/users/mohammed-mahgoub.684f8d88/badges
-Lukas,,Marquardt,1,/users/heyitslks/badges
-Ovais,,Mehboob,0,/users/ovais-mehboob/badges
-morad,,Mohammed,1,/users/morad-mohammed/badges
-Sahal,,Mulki,1,/users/sahal-mulki/badges
-Syed,,Munaz,2,/users/syed-munaz/badges
-Imran,,Mustafa,1,/users/imran-mustafa.f0041310/badges
-Bakir,,Najjar,1,/users/bakir-najjar/badges
-Areeb,,Pasha,1,/users/areeb.pasha/badges
-Ahmed,,Qazi,2,/users/ahmed-qazi.defa842e/badges
-Mohammed Fazalullah,,Qudrath,1,/users/mohammed-fazalullah-qudrath.afd14bfd/badges
-Aruna,,Raman,1,/users/aruna-raman/badges
-Adam,,Refaey,2,/users/adam-refaey/badges
-Matin,,Rezaii,1,/users/matin-rezaii/badges
-Gianni,,Rosa Gallina,1,/users/gianni-rosa-gallina/badges
-Sumaira,,Sagheer,1,/users/sumairas/badges
-Faisal Muhammad,,Saleem,1,/users/fsaleem/badges
-Paolo,,Salvatierra,1,/users/psalvatierra/badges
-Bentic,,Sebastian,1,/users/bentic-sebastian/badges
-Ahmed,,Seddiq,1,/users/ahmed-seddiq.5021351f/badges
-Anirudh,,Sengar,1,/users/anirudh-sengar.e9aaf10d/badges
-Aditya,,Shibu,1,/users/aditya-shibu/badges
-Logeswaran,,Vinayagam,1,/users/logeswaran-vinayagam.78dacafc/badges
-Alexandros,,Vlantis,1,/users/alexandros-vlantis/badges
-John,,Yun Moe,1,/users/john-yun-moe/badges
-daniel,,kinny,1,/users/daniel-kinny/badges
-Nazish Ali,,nazish.rizvi@dubaicustoms.ae,1,/users/nazish-ali-nazish-rizvi-dubaicustoms-ae/badges
+first_name,middle_name,last_name,badge_count,profile_url,mslearn_url
+Ahmed,,Abdelfattah,1,/users/ahmed-abdelfattah.2f89de0b/badges,
+Mohammad,,Abu-Khader,1,/users/mohammad-abukhader/badges,
+Mushtaq,,Ahmad,1,/users/mushtaq-ahmad.0f444749/badges,
+Md Nasim,,Akhtar,1,/users/md-nasim-akhtar.2baf402f/badges,
+Mohamed,,Al Ajlani,1,/users/mohamed-al-ajlani/badges,
+Mahfouz,,Alaghbar,1,/users/mahfouz-alaghbar/badges,
+Muhammad,,Ali,4,/users/muhammadallee/badges,
+Nihil,,Babu,1,/users/nihil-babu.31cf159d/badges,
+Jasim,,Basheer,1,/users/jasim-basheer/badges,
+Salman,,Haider,1,/users/salman-haider.71f3b0d8/badges,
+Mohammad,,Hassan,1,/users/mohammad-hassan.4236d264/badges,
+Hosam,,Kamel,0,/users/hosamkamel/badges,
+Rasul Ahmed,,Khan,1,/users/rasul-ahmed-khan.4a429b5f/badges,
+Mohammed,,Mahgoub,1,/users/mohammed-mahgoub.684f8d88/badges,
+Lukas,,Marquardt,1,/users/heyitslks/badges,
+Ovais,,Mehboob,0,/users/ovais-mehboob/badges,
+morad,,Mohammed,1,/users/morad-mohammed/badges,
+Sahal,,Mulki,1,/users/sahal-mulki/badges,
+Syed,,Munaz,2,/users/syed-munaz/badges,
+Imran,,Mustafa,1,/users/imran-mustafa.f0041310/badges,
+Bakir,,Najjar,1,/users/bakir-najjar/badges,
+Areeb,,Pasha,1,/users/areeb.pasha/badges,
+Ahmed,,Qazi,2,/users/ahmed-qazi.defa842e/badges,
+Mohammed Fazalullah,,Qudrath,1,/users/mohammed-fazalullah-qudrath.afd14bfd/badges,
+Aruna,,Raman,1,/users/aruna-raman/badges,
+Adam,,Refaey,2,/users/adam-refaey/badges,
+Matin,,Rezaii,1,/users/matin-rezaii/badges,
+Gianni,,Rosa Gallina,1,/users/gianni-rosa-gallina/badges,
+Sumaira,,Sagheer,1,/users/sumairas/badges,
+Faisal Muhammad,,Saleem,1,/users/fsaleem/badges,
+Paolo,,Salvatierra,1,/users/psalvatierra/badges,
+Bentic,,Sebastian,1,/users/bentic-sebastian/badges,
+Ahmed,,Seddiq,1,/users/ahmed-seddiq.5021351f/badges,
+Anirudh,,Sengar,1,/users/anirudh-sengar.e9aaf10d/badges,
+Aditya,,Shibu,1,/users/aditya-shibu/badges,
+Logeswaran,,Vinayagam,1,/users/logeswaran-vinayagam.78dacafc/badges,
+Alexandros,,Vlantis,1,/users/alexandros-vlantis/badges,
+John,,Yun Moe,1,/users/john-yun-moe/badges,
+daniel,,kinny,1,/users/daniel-kinny/badges,
+Nazish Ali,,nazish.rizvi@dubaicustoms.ae,1,/users/nazish-ali-nazish-rizvi-dubaicustoms-ae/badges,

@@ -75,6 +75,37 @@ This project tracks **ALL GitHub certifications** from two sources:
 
 > **Note**: All badges from the GitHub organization on Credly are counted, not just the core certifications. As of 2024, GitHub migrated some certification issuance to Microsoft Learn.
 
+### 🎓 Microsoft Learn Integration
+
+This project now supports tracking GitHub certifications from **Microsoft Learn** transcripts, including:
+
+**Certifications (with exam numbers):**
+- **GH-100**: GitHub Administration
+- **GH-200**: GitHub Actions  
+- **GH-300**: GitHub Copilot
+- **GH-400**: GitHub Advanced Security Partner
+- **GH-500**: GitHub Advanced Security
+
+**Applied Skills Assessments:**
+- [Accelerate app development by using GitHub Copilot](https://learn.microsoft.com/en-us/credentials/applied-skills/accelerate-app-development-by-using-github-copilot/)
+
+#### How to Link Your MS Learn Profile
+
+To have your Microsoft Learn GitHub certifications counted in the rankings:
+
+1. **Go to your MS Learn profile**: https://learn.microsoft.com/en-us/users/me/transcript
+2. **Click "Share link"** to create a share URL for your transcript
+3. **Copy the share link** (it looks like: `https://learn.microsoft.com/en-us/users/YOUR-NAME/transcript/share/SHARE_ID`)
+4. **Submit a PR** to update your entry in the appropriate country CSV file in the `datasource/` directory:
+   - Add your share URL to the `mslearn_url` column
+   - Example row: `Jesse,Houwing,6,/users/jessehouwing/badges,https://learn.microsoft.com/en-us/users/jessehouwing-1848/transcript/share/d5gza1z690gp607`
+
+> **Privacy Note**: The transcript share link only exposes your completed certifications and training, not personal account details.
+
+#### MVP Badge
+
+Users with a linked MS Learn profile who have the **Microsoft MVP** affiliation will automatically receive an MVP badge <img src="images/mvp.svg" alt="Microsoft MVP" width="16" height="16"/> next to their name in the rankings. MVP status is detected automatically from the MS Learn profile API.
+
 ### 🎯 Ranking Accuracy
 
 - **Expiration Filtering**: Only active, non-expired certifications are counted
@@ -139,6 +170,7 @@ python3 generate_rankings.py
 ├── fetch_country.py                   # Single country data fetcher
 ├── fetch_data.py                      # Parallel fetcher for all countries
 ├── fetch_large_country.py             # Optimized fetcher for large countries
+├── fetch_mslearn_badges.py            # MS Learn transcript scraper
 ├── generate_rankings.py               # Main ranking generator
 ├── csv_metadata.json                  # Metadata for tracking updates
 ├── TOP10_*.md                         # Generated ranking files

@@ -1,5 +1,5 @@
-first_name,middle_name,last_name,badge_count,profile_url
-Bench,,DENEE,1,/users/ludovic-denee/badges
-Wael,,Latrech,3,/users/wael-latrech.d7e49310/badges
-Antoine,,Pharaon,1,/users/tony-pharaon/badges
-Rémi,,Streignard,1,/users/remi-streignard/badges
+first_name,middle_name,last_name,badge_count,profile_url,mslearn_url
+Bench,,DENEE,1,/users/ludovic-denee/badges,
+Wael,,Latrech,3,/users/wael-latrech.d7e49310/badges,
+Antoine,,Pharaon,1,/users/tony-pharaon/badges,
+Rémi,,Streignard,1,/users/remi-streignard/badges,

@@ -1,4 +1,4 @@
-first_name,middle_name,last_name,badge_count,profile_url
-Daria,,Grishenkova,1,/users/daria-grishenkova/badges
-Milun,,Radonjic,2,/users/milun-radonjic/badges
-Иван,,Каюсов,1,/users/ivan-kaiusov/badges
+first_name,middle_name,last_name,badge_count,profile_url,mslearn_url
+Daria,,Grishenkova,1,/users/daria-grishenkova/badges,
+Milun,,Radonjic,2,/users/milun-radonjic/badges,
+Иван,,Каюсов,1,/users/ivan-kaiusov/badges,

@@ -1,6 +1,6 @@
 # 🌍 TOP 10 GitHub Certifications - Global
 
-> Last updated: February 05, 2026 at 13:20 UTC
+> Last updated: February 05, 2026 at 16:19 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -14,7 +14,7 @@
 |  | [Madis Kõosaar](https://www.credly.com/users/madis-koosaar/badges) | 14 | Solidify AB | Estonia |
 |  | [Marco Celon](https://www.credly.com/users/marco-celon.53bc8019/badges) | 14 | GitHub | Australia |
 |  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 14 | Xpirit Germany GmbH | Germany |
-|  | [Rob Bos](https://www.credly.com/users/rob-bos/badges) | 14 | Xebia | Netherlands |
+|  | [Rob Bos](https://www.credly.com/users/rob-bos/badges) 📚 | 14 | Xebia | Netherlands |
 |  | [stephie Mercy](https://www.credly.com/users/stephie-mercy/badges) | 14 | Ivalue Infosolutions Limited | India |
 |  | [Vincent Marchal](https://www.credly.com/users/vincent-marchal.87a05753/badges) | 14 | Avanade | France |
 
@@ -23,7 +23,7 @@
 ## 📊 Statistics
 
 - **Total Certified Users**: 24,888
-- **Total Badges Earned**: 30,933
+- **Total Badges Earned**: 30,935
 - **Average Badges per User**: 1.24
 - **Highest Badge Count**: 15
 

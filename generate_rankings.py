@@ -22,6 +22,109 @@ except ImportError:
     MSLEARN_AVAILABLE = False
     print("⚠️  MS Learn badge fetching not available (fetch_mslearn_badges.py not found)")
 
+
+def is_badge_expired(expires_at_date):
+    """Check if a badge is expired based on expires_at_date"""
+    if not expires_at_date:  # null = never expires
+        return False
+    
+    try:
+        expiration_date = datetime.strptime(expires_at_date, "%Y-%m-%d").date()
+        current_date = datetime.now().date()
+        return expiration_date < current_date
+    except Exception:
+        return False
+
+
+def fetch_credly_badges(profile_url):
+    """Fetch all non-expired GitHub badge names from Credly for a user.
+    Returns a set of badge names."""
+    badges = set()
+    
+    if not profile_url:
+        return badges
+    
+    try:
+        # Extract username from profile_url (/users/username/badges)
+        parts = profile_url.split('/')
+        username = parts[2] if len(parts) > 2 and parts[1] == 'users' else None
+        if not username:
+            return badges
+        
+        page = 1
+        while True:
+            url = f"https://www.credly.com/users/{username}/badges.json?page={page}&per_page=100"
+            response = requests.get(url, timeout=10)
+            if response.status_code != 200:
+                break
+            
+            data = response.json()
+            badge_list = data.get('data', [])
+            if not badge_list:
+                break
+            
+            for badge in badge_list:
+                # Check if badge is from GitHub organization
+                issuer = badge.get('issuer', {})
+                entities = issuer.get('entities', [])
+                is_github_org = any(
+                    entity.get('entity', {}).get('id') == '63074953-290b-4dce-86ce-ea04b4187219'
+                    for entity in entities
+                )
+                
+                if is_github_org:
+                    expires_at_date = badge.get('expires_at_date')
+                    if not is_badge_expired(expires_at_date):
+                        badge_template = badge.get('badge_template', {})
+                        badge_name = badge_template.get('name', '')
+                        if badge_name:
+                            badges.add(badge_name)
+            
+            page += 1
+            if page > 10:  # Safety limit
+                break
+        
+    except Exception as e:
+        pass  # Return whatever we got
+    
+    return badges
+
+
+def get_merged_badge_count(profile_url, mslearn_url):
+    """Get total badge count by merging Credly and MS Learn badges.
+    
+    Returns: (total_count, credly_badges, mslearn_certs, mslearn_skills, is_mvp)
+    """
+    # Get Credly badges (non-expired)
+    credly_badges = fetch_credly_badges(profile_url)
+    
+    # Get MS Learn badges
+    mslearn_certs = []
+    mslearn_skills = []
+    is_mvp = False
+    
+    if mslearn_url and MSLEARN_AVAILABLE:
+        mslearn_result = fetch_mslearn_github_badges(mslearn_url)
+        mslearn_certs = mslearn_result.get('certifications', [])
+        mslearn_skills = mslearn_result.get('applied_skills', [])
+        is_mvp = mslearn_result.get('is_mvp', False)
+    
+    # Create a unified set of all badges
+    # Credly badge names: "GitHub Administration", "GitHub Copilot", etc.
+    # MS Learn cert names: "GitHub Administration", "GitHub Copilot", etc. (normalized to match)
+    all_badges = set(credly_badges)
+    
+    # Add MS Learn certifications (these should have matching names)
+    for cert in mslearn_certs:
+        all_badges.add(cert)
+    
+    # Applied skills are always additional (not duplicates of Credly badges)
+    for skill in mslearn_skills:
+        all_badges.add(skill)
+    
+    return len(all_badges), credly_badges, mslearn_certs, mslearn_skills, is_mvp
+
+
 # Continent mapping
 CONTINENT_MAP = {
     # AMERICAS
@@ -219,6 +322,25 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
     else:
         filtered_users = users
     
+    # FIRST: Update badge counts for ALL users with mslearn_url
+    # This ensures MS Learn certs are counted BEFORE sorting/ranking
+    mslearn_users = [u for u in filtered_users if u.get('mslearn_url')]
+    if mslearn_users:
+        print(f"  Merging Credly + MS Learn badges for {len(mslearn_users)} users with MS Learn URLs...")
+        for user in mslearn_users:
+            merged_count, credly_badges, mslearn_certs, mslearn_skills, is_mvp = get_merged_badge_count(
+                user.get('profile_url', ''),
+                user.get('mslearn_url', '')
+            )
+            user['credly_badges'] = list(credly_badges)
+            user['mslearn_certs'] = mslearn_certs
+            user['mslearn_skills'] = mslearn_skills
+            user['is_mvp'] = is_mvp
+            old_count = user['badges']
+            user['badges'] = merged_count
+            if merged_count != old_count:
+                print(f"    {user['name']}: {old_count} → {merged_count} (Credly={len(credly_badges)}, MS Learn certs={len(mslearn_certs)}, skills={len(mslearn_skills)})")
+    
     # Sort by badges (descending) then by name (alphabetically)
     sorted_users = sorted(filtered_users, key=lambda x: (-x['badges'], x['name'].lower()))
     
@@ -254,20 +376,6 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
     for rank, user in top_users:
         company = fetch_user_company(user.get('profile_url', ''))
         user['company'] = company
-    
-    # Fetch MS Learn badges for users with mslearn_url
-    if MSLEARN_AVAILABLE:
-        mslearn_users = [(rank, user) for rank, user in top_users if user.get('mslearn_url')]
-        if mslearn_users:
-            print(f"  Fetching MS Learn badges for {len(mslearn_users)} users with MS Learn URLs...")
-            for rank, user in mslearn_users:
-                mslearn_result = fetch_mslearn_github_badges(user['mslearn_url'])
-                user['mslearn_badges'] = mslearn_result.get('badge_count', 0)
-                user['mslearn_certs'] = mslearn_result.get('certifications', [])
-                user['mslearn_skills'] = mslearn_result.get('applied_skills', [])
-                user['is_mvp'] = mslearn_result.get('is_mvp', False)
-                if mslearn_result.get('error'):
-                    print(f"    ⚠️  MS Learn error for {user['name']}: {mslearn_result['error']}")
     
     # Get outdated CSVs
     outdated = get_outdated_csvs()

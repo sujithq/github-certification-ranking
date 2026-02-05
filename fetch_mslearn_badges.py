@@ -18,6 +18,12 @@ GITHUB_EXAM_MAPPINGS = {
     'gh-500': 'GitHub Advanced Security',
 }
 
+# Applied Skills exam codes
+GITHUB_APPLIED_SKILLS_EXAM_MAPPINGS = {
+    'az-2006': 'Automate Azure Load Testing by using GitHub Actions',
+    'az-2007': 'Accelerate app development by using GitHub Copilot',
+}
+
 # GitHub certification names in MS Learn (active certifications)
 GITHUB_CERT_MAPPINGS = {
     'github foundations': 'GitHub Foundations',
@@ -28,9 +34,10 @@ GITHUB_CERT_MAPPINGS = {
     'github certified: advanced security': 'GitHub Advanced Security',
 }
 
-# Applied Skills assessments for GitHub
+# Applied Skills assessments for GitHub (title pattern -> display name)
 GITHUB_APPLIED_SKILLS = {
-    'accelerate app development by using github copilot': 'GitHub Copilot Applied Skills',
+    'accelerate app development by using github copilot': 'Accelerate app development by using GitHub Copilot',
+    'automate azure load testing by using github actions': 'Automate Azure Load Testing by using GitHub Actions',
 }
 
 def extract_share_id(mslearn_url):
@@ -152,6 +159,12 @@ def fetch_mslearn_github_badges(mslearn_url, verbose=False):
                 if display_name not in unique_certs:
                     unique_certs.add(display_name)
                     result['certifications'].append(display_name)
+            # Check for applied skills exam codes (e.g., AZ-2007)
+            elif exam_number in GITHUB_APPLIED_SKILLS_EXAM_MAPPINGS:
+                display_name = GITHUB_APPLIED_SKILLS_EXAM_MAPPINGS[exam_number]
+                if display_name not in unique_certs:
+                    unique_certs.add(display_name)
+                    result['applied_skills'].append(display_name)
             # Also check by title
             elif 'github' in exam_title:
                 for pattern, display_name in GITHUB_CERT_MAPPINGS.items():
@@ -161,16 +174,14 @@ def fetch_mslearn_github_badges(mslearn_url, verbose=False):
                             result['certifications'].append(display_name)
                         break
         
-        # 3. Check applied skills assessments
-        for skill in cert_data.get('appliedSkills', []):
-            if isinstance(skill, dict):
-                skill_name = skill.get('name', '').lower().strip()
-            else:
-                skill_name = str(skill).lower().strip()
+        # 3. Check applied skills assessments (in appliedSkillsData at top level)
+        applied_skills_data = data.get('appliedSkillsData', {})
+        for skill in applied_skills_data.get('appliedSkillsCredentials', []):
+            skill_title = skill.get('title', '').lower().strip()
             
             # Check if it's a GitHub applied skill
             for pattern, display_name in GITHUB_APPLIED_SKILLS.items():
-                if pattern in skill_name:
+                if pattern in skill_title:
                     if display_name not in unique_certs:
                         unique_certs.add(display_name)
                         result['applied_skills'].append(display_name)

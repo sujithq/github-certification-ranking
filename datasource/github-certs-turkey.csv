@@ -1,8 +1,8 @@
 first_name,middle_name,last_name,badge_count,profile_url
 SUDAD,,ABDULATEEF ABDULRAZZAQ ABDUL R.,1,/users/sudad-al-ajili/badges
-MUSTAFA,,AKALIN,1,/users/mustafa-akalin.d376095f/badges
-Bora,,ARAT,1,/users/bora-arat/badges
-Hüseyin,,ASLIM,1,/users/huseyin-aslim/badges
+MUSTAFA,,AKALIN,0,/users/mustafa-akalin.d376095f/badges
+Bora,,ARAT,0,/users/bora-arat/badges
+Hüseyin,,ASLIM,0,/users/huseyin-aslim/badges
 Fatih,,AYDIN,1,/users/fatih-aydin.c55f1444/badges
 Zyad,,Abdelhafiz,1,/users/zyad-abdelhafiz/badges
 Abuobaida,,Abdi,1,/users/abuobaida-abdi/badges
@@ -14,9 +14,9 @@ Ulaş,,Bayraktar,1,/users/ulas-bayraktar/badges
 Metin,Sertac,Bayır,6,/users/metin-sertac-bayir/badges
 Musa,,Bostanci,1,/users/musa-bostanci/badges
 Ömer,,Büyükçelik,1,/users/omer-buyukcelik/badges
-Mehmet Burak,,CETIN,1,/users/mehmet-burak-cetin/badges
+Mehmet Burak,,CETIN,0,/users/mehmet-burak-cetin/badges
 Mehmet,,Can Gülseroğlu,1,/users/mehmet-can-gulseroglu/badges
-Abdullah,,Celik,1,/users/abdullahcelik/badges
+Abdullah,,Celik,0,/users/abdullahcelik/badges
 Tunc,,Celik,1,/users/tunc-celik/badges
 Guray,,Cetin,1,/users/guray-cetin/badges
 EMRE,,DEMİRDAĞ,1,/users/emre-demirdag/badges
@@ -56,7 +56,7 @@ Emre Ozan,,Memis,10,/users/emre-ozan-memis/badges
 Fırat,,OLÇUM,1,/users/firatolcum/badges
 Halim,,Ocaklı,1,/users/halim-ocakli/badges
 Emrah,,Ozdemir,1,/users/ozdemiremrah/badges
-Maksim,,Rotar,2,/users/maksim-rotar/badges
+Maksim,,Rotar,0,/users/maksim-rotar/badges
 MUSTAFA,,SARI,1,/users/mustafa-sari.37a0be7a/badges
 Yavuzhan,,Saglam,1,/users/yavuzhan-saglam/badges
 Kaan,,Sakallı,1,/users/kaan-sakalli/badges

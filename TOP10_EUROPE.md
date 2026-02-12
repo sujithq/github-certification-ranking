@@ -1,12 +1,12 @@
 # 🇪🇺 TOP 10 GitHub Certifications - Europe
 
-> Last updated: February 12, 2026 at 02:10 UTC
+> Last updated: February 12, 2026 at 20:51 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Company | Country |
 |------|------|--------|---------|---------|
-| 🥇 #1 | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) | 17 | Xebia | Netherlands |
+| 🥇 #1 | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) | 32 | Xebia | Netherlands |
 | 🥈 #2 | [Dennis Thie](https://www.credly.com/users/dennisthie/badges) | 15 | Xebia | Netherlands |
 |  | [Hidde de Smet](https://www.credly.com/users/hidde-de-smet/badges) | 15 | Xebia | Netherlands |
 |  | [Joost Voskuil](https://www.credly.com/users/joost-voskuil/badges) | 15 | Delta-N | Netherlands |
@@ -22,9 +22,9 @@
 ## 📊 Statistics
 
 - **Total Certified Users**: 4,170
-- **Total Badges Earned**: 5,913
+- **Total Badges Earned**: 5,930
 - **Average Badges per User**: 1.42
-- **Highest Badge Count**: 17
+- **Highest Badge Count**: 32
 
 ---
 

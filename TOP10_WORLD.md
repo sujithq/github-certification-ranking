@@ -1,15 +1,15 @@
 # 🌍 TOP 10 GitHub Certifications - Global
 
-> Last updated: February 12, 2026 at 21:59 UTC
+> Last updated: February 13, 2026 at 00:22 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Company | Country |
 |------|------|--------|---------|---------|
-| 🥇 #1 | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) | 46 | Xebia | Netherlands |
-| 🥈 #2 | [Andre Dias](https://www.credly.com/users/andredias/badges) | 16 | Avanade | Brazil |
-| 🥉 #3 | [Dennis Thie](https://www.credly.com/users/dennisthie/badges) | 15 | Xebia | Netherlands |
-|  | [Felipe Augusto](https://www.credly.com/users/felipementel/badges) | 15 | Avanade | Brazil |
+| 🥇 #1 | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) | 47 | Xebia | Netherlands |
+| 🥈 #2 | [Dennis Thie](https://www.credly.com/users/dennisthie/badges) | 18 | Xebia | Netherlands |
+| 🥉 #3 | [Andre Dias](https://www.credly.com/users/andredias/badges) | 16 | Avanade | Brazil |
+| #4 | [Felipe Augusto](https://www.credly.com/users/felipementel/badges) | 15 | Avanade | Brazil |
 |  | [Hidde de Smet](https://www.credly.com/users/hidde-de-smet/badges) | 15 | Xebia | Netherlands |
 |  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 15 | Avanade | Brazil |
 |  | [Joost Voskuil](https://www.credly.com/users/joost-voskuil/badges) | 15 | Delta-N | Netherlands |
@@ -26,10 +26,10 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 24,900
-- **Total Badges Earned**: 31,088
+- **Total Certified Users**: 24,901
+- **Total Badges Earned**: 31,091
 - **Average Badges per User**: 1.25
-- **Highest Badge Count**: 46
+- **Highest Badge Count**: 47
 
 ---
 

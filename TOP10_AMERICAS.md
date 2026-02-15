@@ -1,6 +1,6 @@
 # 🌎 TOP 10 GitHub Certifications - Americas
 
-> Last updated: February 14, 2026 at 00:20 UTC
+> Last updated: February 15, 2026 at 00:19 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -11,8 +11,8 @@
 |  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 16 | Avanade | Brazil |
 | #4 | [Diego Giglioli](https://www.credly.com/users/diego-giglioli.bb64eaa5/badges) | 14 | Avanade | Brazil |
 | #5 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 13 | Avanade | Brazil |
-|  | [Daniel Koch](https://www.credly.com/users/daniel-koch.dc5d8183/badges) | 13 | CodeCargo | United States |
-| #7 | [John Wildes](https://www.credly.com/users/john-wildes/badges) | 12 |  | United States |
+| #6 | [Daniel Koch](https://www.credly.com/users/daniel-koch.dc5d8183/badges) | 12 | CodeCargo | United States |
+|  | [John Wildes](https://www.credly.com/users/john-wildes/badges) | 12 |  | United States |
 |  | [Luana Corrêa Vieira](https://www.credly.com/users/luana-vieira.36aca490/badges) | 12 | Avanade | Brazil |
 |  | [Matheus Barros](https://www.credly.com/users/matheus-barros.1892a132/badges) | 12 | Avanade | Brazil |
 | #10 | [Caio Vianna Vieira](https://www.credly.com/users/caio-vianna.b6440384/badges) | 11 | Avanade | Brazil |
@@ -24,8 +24,8 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 6,803
-- **Total Badges Earned**: 8,700
+- **Total Certified Users**: 6,804
+- **Total Badges Earned**: 8,698
 - **Average Badges per User**: 1.28
 - **Highest Badge Count**: 18
 

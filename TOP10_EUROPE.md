@@ -1,31 +1,30 @@
 # 🇪🇺 TOP 10 GitHub Certifications - Europe
 
-> Last updated: February 07, 2026 at 00:22 UTC
+> Last updated: February 20, 2026 at 21:43 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Company | Country |
 |------|------|--------|---------|---------|
-| 🥇 #1 | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) <img src="images/mvp.svg" alt="Microsoft MVP" width="16" height="16"/> 📚 | 18 | Xebia | Netherlands |
-| 🥈 #2 | [Rob Bos](https://www.credly.com/users/rob-bos/badges) 📚 | 17 | Xebia | Netherlands |
-| 🥉 #3 | [Joost Voskuil](https://www.credly.com/users/joost-voskuil/badges) | 16 | Delta-N | Netherlands |
-| #4 | [Hidde de Smet](https://www.credly.com/users/hidde-de-smet/badges) | 15 | Xebia | Netherlands |
+| 🥇 #1 | [Dennis Thie](https://www.credly.com/users/dennisthie/badges) | 19 | Xebia | Netherlands |
+| 🥈 #2 | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) <img src="images/mvp.svg" alt="Microsoft MVP" width="16" height="16"/> 📚 | 17 | Xebia | Netherlands |
+|  | [Rob Bos](https://www.credly.com/users/rob-bos/badges) 📚 | 17 | Xebia | Netherlands |
+| #4 | [Joost Voskuil](https://www.credly.com/users/joost-voskuil/badges) | 16 | Delta-N | Netherlands |
+|  | [Sujith Quintelier](https://www.credly.com/users/sujith/badges) 📚 | 16 | Microsoft | Belgium |
+| #6 | [Hidde de Smet](https://www.credly.com/users/hidde-de-smet/badges) | 15 | Xebia | Netherlands |
 |  | [Madis Kõosaar](https://www.credly.com/users/madis-koosaar/badges) | 15 | Solidify AB | Estonia |
-|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 15 | Xpirit Germany GmbH | Germany |
-| #7 | [Till Spindler](https://www.credly.com/users/till-spindler/badges) | 14 | Eficode | Germany |
+|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 15 | Xebia | Germany |
+| #9 | [Joas de Groot](https://www.credly.com/users/joas707/badges) | 14 | Delta-N | Netherlands |
 |  | [Vincent Marchal](https://www.credly.com/users/vincent-marchal.87a05753/badges) | 14 | Avanade | France |
-| #9 | [Christos Galanopoulos](https://www.credly.com/users/christos-galanopoulos/badges) | 13 |  | Greece |
-|  | [Olivier Delmotte](https://www.credly.com/users/o.delmotte/badges) | 13 | Avanade | France |
-|  | [Sujith Quintelier](https://www.credly.com/users/sujith/badges) | 13 | Xebia | Belgium |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 4,180
-- **Total Badges Earned**: 6,057
-- **Average Badges per User**: 1.45
-- **Highest Badge Count**: 18
+- **Total Certified Users**: 4,187
+- **Total Badges Earned**: 6,109
+- **Average Badges per User**: 1.46
+- **Highest Badge Count**: 19
 
 ---
 

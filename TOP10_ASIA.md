@@ -1,13 +1,13 @@
 # 🌏 TOP 10 GitHub Certifications - Asia
 
-> Last updated: February 07, 2026 at 00:22 UTC
+> Last updated: February 20, 2026 at 21:43 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Company | Country |
 |------|------|--------|---------|---------|
 | 🥇 #1 | [stephie Mercy](https://www.credly.com/users/stephie-mercy/badges) | 14 | Ivalue Infosolutions Limited | India |
-| 🥈 #2 | [Ramesh Kumar Dasari](https://www.credly.com/users/ramesh-kumar.6071340e/badges) | 11 |  | India |
+| 🥈 #2 | [Ramesh Kumar Dasari](https://www.credly.com/users/ramesh-kumar.6071340e/badges) | 11 | Xebia | India |
 | 🥉 #3 | [Emre Ozan Memis](https://www.credly.com/users/emre-ozan-memis/badges) | 10 |  | Turkey |
 |  | [Hoysala Garudanagiri](https://www.credly.com/users/hoysala-garudanagiri/badges) | 10 | Canarys Automations Limited | India |
 | #5 | [Rajesh C N](https://www.credly.com/users/rajesh-c-n/badges) | 9 | Xebia | India |
@@ -21,6 +21,7 @@
 |  | [Nagaraj Bhairaji](https://www.credly.com/users/nagaraj-bhairaji/badges) | 6 |  | India |
 |  | [NIKHIL GOWDA N](https://www.credly.com/users/nikhil-gowda-n/badges) | 6 |  | India |
 |  | [Pradip Ghosh](https://www.credly.com/users/pradipghosh/badges) | 6 | Optum Global Solutions (India) Pvt. Ltd. | India |
+|  | [Sandeep Doddamani](https://www.credly.com/users/sandeep-doddamani/badges) | 6 |  | India |
 |  | [Shiva Sagar M](https://www.credly.com/users/shiva-sagar-m.9963b9a5/badges) | 6 |  | India |
 |  | [Shunsuke Yoshikawa](https://www.credly.com/users/shunsuke-yoshikawa.34e788fb/badges) | 6 |  | Japan |
 |  | [yutaka osada](https://www.credly.com/users/yutaka-osada/badges) | 6 |  | Japan |
@@ -30,8 +31,8 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 12,193
-- **Total Badges Earned**: 14,371
+- **Total Certified Users**: 12,189
+- **Total Badges Earned**: 14,370
 - **Average Badges per User**: 1.18
 - **Highest Badge Count**: 14
 

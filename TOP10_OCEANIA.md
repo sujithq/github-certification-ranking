@@ -1,6 +1,6 @@
 # 🌊 TOP 10 GitHub Certifications - Oceania
 
-> Last updated: February 07, 2026 at 00:22 UTC
+> Last updated: February 20, 2026 at 21:44 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -26,15 +26,14 @@
 |  | [Sayali Chavan](https://www.credly.com/users/sayali-chavan.46e2379d/badges) | 4 |  | Australia |
 |  | [shruti Singh](https://www.credly.com/users/shruti-singh.4e3d422a/badges) | 4 |  | Australia |
 |  | [Susmitha Banda](https://www.credly.com/users/susmitha-banda.8e9506ea/badges) | 4 |  | Australia |
-|  | [Tim Jacomb](https://www.credly.com/users/tim-jacomb/badges) | 4 |  | New Zealand |
 |  | [Viet Luu](https://www.credly.com/users/viet-luu.28e619f2/badges) | 4 |  | Australia |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 583
-- **Total Badges Earned**: 811
+- **Total Certified Users**: 585
+- **Total Badges Earned**: 812
 - **Average Badges per User**: 1.39
 - **Highest Badge Count**: 14
 

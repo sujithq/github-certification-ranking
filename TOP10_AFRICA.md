@@ -1,6 +1,6 @@
 # 🌍 TOP 10 GitHub Certifications - Africa
 
-> Last updated: February 23, 2026 at 00:20 UTC
+> Last updated: February 24, 2026 at 00:20 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -19,13 +19,14 @@
 |  | [Fred Nyakagwa](https://www.credly.com/users/fred-nyakagwa/badges) | 4 |  | Kenya |
 |  | [Paul Wechuli](https://www.credly.com/users/paul-wechuli/badges) | 4 |  | Kenya |
 |  | [Samuel Afolabi](https://www.credly.com/users/samuel-afolabi.4b624579/badges) | 4 |  | Nigeria |
+|  | [TIMILEHIN ADEFARE](https://www.credly.com/users/timilehin-adefare.5fbf51df/badges) | 4 | Tek Experts Nigeria Limited | Nigeria |
 
 ---
 
 ## 📊 Statistics
 
 - **Total Certified Users**: 1,158
-- **Total Badges Earned**: 1,345
+- **Total Badges Earned**: 1,348
 - **Average Badges per User**: 1.16
 - **Highest Badge Count**: 11
 

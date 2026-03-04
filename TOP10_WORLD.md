@@ -1,6 +1,6 @@
 # 🌍 TOP 10 GitHub Certifications - Global
 
-> Last updated: March 03, 2026 at 01:12 UTC
+> Last updated: March 04, 2026 at 01:09 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -15,22 +15,15 @@
 | #7 | [Hidde de Smet](https://www.credly.com/users/hidde-de-smet/badges) | 15 | Xebia | Netherlands |
 |  | [Joas de Groot](https://www.credly.com/users/joas707/badges) | 15 | Delta-N | Netherlands |
 |  | [Rob Bos](https://www.credly.com/users/rob-bos/badges) | 15 | Xebia | Netherlands |
-| #10 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 14 | Avanade | Brazil |
-|  | [Christos Galanopoulos](https://www.credly.com/users/christos-galanopoulos/badges) | 14 |  | Greece |
-|  | [Diego Giglioli](https://www.credly.com/users/diego-giglioli.bb64eaa5/badges) | 14 | Avanade | Brazil |
-|  | [Madis Kõosaar](https://www.credly.com/users/madis-koosaar/badges) | 14 | Solidify AB | Estonia |
-|  | [Marco Celon](https://www.credly.com/users/marco-celon.53bc8019/badges) | 14 | GitHub | Australia |
-|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 14 | Xebia | Germany |
-|  | [stephie Mercy](https://www.credly.com/users/stephie-mercy/badges) | 14 | Ivalue Infosolutions Limited | India |
-|  | [Vincent Marchal](https://www.credly.com/users/vincent-marchal.87a05753/badges) | 14 | Avanade | France |
+|  | [Vincent Marchal](https://www.credly.com/users/vincent-marchal.87a05753/badges) | 15 | Avanade | France |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 24,936
-- **Total Badges Earned**: 31,303
-- **Average Badges per User**: 1.26
+- **Total Certified Users**: 24,938
+- **Total Badges Earned**: 31,292
+- **Average Badges per User**: 1.25
 - **Highest Badge Count**: 47
 
 ---

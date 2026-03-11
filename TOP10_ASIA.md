@@ -1,6 +1,6 @@
 # 🌏 TOP 10 GitHub Certifications - Asia
 
-> Last updated: March 10, 2026 at 02:01 UTC
+> Last updated: March 11, 2026 at 02:01 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -14,7 +14,6 @@
 | #6 | [Adithya MS](https://www.credly.com/users/adithya-ms.f90708a6/badges) | 7 |  | India |
 |  | [Niranjana K](https://www.credly.com/users/niranjana-koni/badges) | 7 |  | India |
 | #8 | [Abededeen Asra](https://www.credly.com/users/abededeen-asra/badges) | 6 |  | India |
-|  | [Akitaka Shinba](https://www.credly.com/users/akitaka-shinba/badges) | 6 | オルターブース | Japan |
 |  | [Han Lin](https://www.credly.com/users/hanlin/badges) | 6 | National Taiwan University | Taiwan |
 |  | [Karthick Manikandan](https://www.credly.com/users/karthick-manikandan.ac216814/badges) | 6 |  | India |
 |  | [Metin Sertac Bayır](https://www.credly.com/users/metin-sertac-bayir/badges) | 6 |  | Turkey |
@@ -28,8 +27,8 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 12,190
-- **Total Badges Earned**: 14,335
+- **Total Certified Users**: 12,188
+- **Total Badges Earned**: 14,336
 - **Average Badges per User**: 1.18
 - **Highest Badge Count**: 14
 

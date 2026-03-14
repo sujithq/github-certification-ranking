@@ -1,6 +1,6 @@
 # 🇪🇺 TOP 10 GitHub Certifications - Europe
 
-> Last updated: March 13, 2026 at 02:04 UTC
+> Last updated: March 14, 2026 at 02:02 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -13,18 +13,18 @@
 |  | [Rob Bos](https://www.credly.com/users/rob-bos/badges) | 16 | Xebia | Netherlands |
 | #6 | [Fabian Biesheuvel](https://www.credly.com/users/fabian-biesheuvel/badges) | 15 | Delta-N | Netherlands |
 |  | [Joas de Groot](https://www.credly.com/users/joas707/badges) | 15 | Delta-N | Netherlands |
+|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 15 | Xebia | Germany |
 |  | [Sujith Quintelier](https://www.credly.com/users/sujith/badges) | 15 | Microsoft | Belgium |
-| #9 | [Christos Galanopoulos](https://www.credly.com/users/christos-galanopoulos/badges) | 14 |  | Greece |
+| #10 | [Christos Galanopoulos](https://www.credly.com/users/christos-galanopoulos/badges) | 14 |  | Greece |
 |  | [Dennis Thie](https://www.credly.com/users/dennisthie/badges) | 14 | Xebia | Netherlands |
 |  | [Madis Kõosaar](https://www.credly.com/users/madis-koosaar/badges) | 14 | Solidify AB | Estonia |
-|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 14 | Xebia | Germany |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 4,176
-- **Total Badges Earned**: 5,999
+- **Total Certified Users**: 4,177
+- **Total Badges Earned**: 6,024
 - **Average Badges per User**: 1.44
 - **Highest Badge Count**: 19
 

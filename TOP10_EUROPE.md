@@ -1,6 +1,6 @@
 # 🇪🇺 TOP 10 GitHub Certifications - Europe
 
-> Last updated: March 13, 2026 at 01:09 UTC
+> Last updated: March 14, 2026 at 01:09 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -14,17 +14,15 @@
 |  | [Rob Bos](https://www.credly.com/users/rob-bos/badges) | 16 | Xebia | Netherlands |
 | #7 | [Fabian Biesheuvel](https://www.credly.com/users/fabian-biesheuvel/badges) | 15 | Delta-N | Netherlands |
 |  | [Joas de Groot](https://www.credly.com/users/joas707/badges) | 15 | Delta-N | Netherlands |
+|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 15 | Xebia | Germany |
 |  | [Sujith Quintelier](https://www.credly.com/users/sujith/badges) | 15 | Microsoft | Belgium |
-| #10 | [Christos Galanopoulos](https://www.credly.com/users/christos-galanopoulos/badges) | 14 |  | Greece |
-|  | [Madis Kõosaar](https://www.credly.com/users/madis-koosaar/badges) | 14 | Solidify AB | Estonia |
-|  | [Nico Orschel](https://www.credly.com/users/nico-orschel/badges) | 14 | Xebia | Germany |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 4,179
-- **Total Badges Earned**: 6,040
+- **Total Certified Users**: 4,178
+- **Total Badges Earned**: 6,059
 - **Average Badges per User**: 1.45
 - **Highest Badge Count**: 48
 

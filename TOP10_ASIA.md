@@ -1,19 +1,20 @@
 # 🌏 TOP 10 GitHub Certifications - Asia
 
-> Last updated: March 20, 2026 at 02:06 UTC
+> Last updated: March 21, 2026 at 02:01 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
 | Rank | Name | Badges | Company | Country |
 |------|------|--------|---------|---------|
-| 🥇 #1 | [stephie Mercy](https://www.credly.com/users/stephie-mercy/badges) | 14 | Ivalue Infosolutions Limited | India |
-| 🥈 #2 | [Ramesh Dasari](https://www.credly.com/users/ramesh.dasari/badges) | 12 | Xebia | India |
-| 🥉 #3 | [Hoysala Garudanagiri](https://www.credly.com/users/hoysala-garudanagiri/badges) | 11 | Canarys Automations Limited | India |
-|  | [Rajesh C N](https://www.credly.com/users/rajesh-c-n/badges) | 11 | Xebia | India |
-| #5 | [Emre Ozan Memis](https://www.credly.com/users/emre-ozan-memis/badges) | 10 |  | Turkey |
-| #6 | [Adithya MS](https://www.credly.com/users/adithya-ms.f90708a6/badges) | 7 | Canarys Automations Limited | India |
-|  | [Niranjana K](https://www.credly.com/users/niranjana-koni/badges) | 7 | Canarys Automations Limited | India |
-| #8 | [Abededeen Asra](https://www.credly.com/users/abededeen-asra/badges) | 6 |  | India |
+| 🥇 #1 | [Naveen Kunder](https://www.credly.com/users/naveenkunder/badges) | 14 | Canarys Automations Limited | India |
+|  | [stephie Mercy](https://www.credly.com/users/stephie-mercy/badges) | 14 | Ivalue Infosolutions Limited | India |
+| 🥉 #3 | [Adithya MS](https://www.credly.com/users/adithya-ms.f90708a6/badges) | 13 | Canarys Automations Limited | India |
+| #4 | [Rajesh C N](https://www.credly.com/users/rajesh-c-n/badges) | 12 | Xebia | India |
+|  | [Ramesh Dasari](https://www.credly.com/users/ramesh.dasari/badges) | 12 | Xebia | India |
+| #6 | [Hoysala Garudanagiri](https://www.credly.com/users/hoysala-garudanagiri/badges) | 11 | Canarys Automations Limited | India |
+|  | [Niranjana K](https://www.credly.com/users/niranjana-koni/badges) | 11 | Canarys Automations Limited | India |
+| #8 | [Emre Ozan Memis](https://www.credly.com/users/emre-ozan-memis/badges) | 10 |  | Turkey |
+| #9 | [Abededeen Asra](https://www.credly.com/users/abededeen-asra/badges) | 6 |  | India |
 |  | [Han Lin](https://www.credly.com/users/hanlin/badges) | 6 | National Taiwan University | Taiwan |
 |  | [Karthick Manikandan](https://www.credly.com/users/karthick-manikandan.ac216814/badges) | 6 |  | India |
 |  | [Metin Sertac Bayır](https://www.credly.com/users/metin-sertac-bayir/badges) | 6 |  | Turkey |
@@ -27,8 +28,8 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 12,188
-- **Total Badges Earned**: 14,335
+- **Total Certified Users**: 12,189
+- **Total Badges Earned**: 14,359
 - **Average Badges per User**: 1.18
 - **Highest Badge Count**: 14
 

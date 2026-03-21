@@ -1,6 +1,6 @@
 # 🌎 TOP 10 GitHub Certifications - Americas
 
-> Last updated: March 20, 2026 at 02:06 UTC
+> Last updated: March 21, 2026 at 02:00 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -8,23 +8,24 @@
 |------|------|--------|---------|---------|
 | 🥇 #1 | [Andre Dias](https://www.credly.com/users/andredias/badges) | 19 | Avanade | Brazil |
 |  | [Felipe Augusto](https://www.credly.com/users/felipementel/badges) | 19 | Avanade | Brazil |
-| 🥉 #3 | [Barnes Chism](https://www.credly.com/users/barnes-chism/badges) | 17 | Xebia | United States |
-|  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 17 | Avanade | Brazil |
+| 🥉 #3 | [Barnes Chism](https://www.credly.com/users/barnes-chism/badges) | 18 | Xebia | United States |
+| #4 | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 17 | Avanade | Brazil |
 | #5 | [Diego Giglioli](https://www.credly.com/users/diego-giglioli.bb64eaa5/badges) | 16 | Avanade | Brazil |
 |  | [Matheus Barros](https://www.credly.com/users/matheus-barros.1892a132/badges) | 16 | Avanade | Brazil |
-| #7 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 14 | Avanade | Brazil |
+| #7 | [Kaan Turgut](https://www.credly.com/users/hasan-kaan-turgut/badges) | 15 | Lenovo | Canada |
+|  | [rich schwarz](https://www.credly.com/users/rich-schwarz/badges) | 15 | Xebia | United States |
+| #9 | [Andre Nunes](https://www.credly.com/users/andre-nunes.0d03ef9b/badges) | 14 | Avanade | Brazil |
+|  | [Evan 🤘 Allen](https://www.credly.com/users/evan_allen/badges) | 14 |  | United States |
 |  | [Jânio Santos](https://www.credly.com/users/janio-santos-silva/badges) | 14 | Avanade | Brazil |
 |  | [Luana Corrêa Vieira](https://www.credly.com/users/luana-vieira.36aca490/badges) | 14 | Avanade | Brazil |
-| #10 | [Caio Vianna Vieira](https://www.credly.com/users/caio-vianna.b6440384/badges) | 13 | Avanade | Brazil |
-|  | [Leonardo Vizagre](https://www.credly.com/users/leonardo.vizagre/badges) | 13 | Avanade | Brazil |
 
 ---
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 6,839
-- **Total Badges Earned**: 8,920
-- **Average Badges per User**: 1.30
+- **Total Certified Users**: 6,838
+- **Total Badges Earned**: 8,941
+- **Average Badges per User**: 1.31
 - **Highest Badge Count**: 19
 
 ---

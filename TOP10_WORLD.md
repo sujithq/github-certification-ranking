@@ -1,6 +1,6 @@
 # 🌍 TOP 10 GitHub Certifications - Global
 
-> Last updated: March 20, 2026 at 02:06 UTC
+> Last updated: March 21, 2026 at 02:01 UTC
 
 ## 🏆 Top 10 GitHub Certifications Leaders
 
@@ -10,9 +10,9 @@
 |  | [Felipe Augusto](https://www.credly.com/users/felipementel/badges) | 19 | Avanade | Brazil |
 |  | [Jesse Houwing](https://www.credly.com/users/jessehouwing/badges) | 19 | Xebia | Netherlands |
 |  | [Joost Voskuil](https://www.credly.com/users/joost-voskuil/badges) | 19 | Delta-N | Netherlands |
-| #5 | [Vincent Marchal](https://www.credly.com/users/vincent-marchal.87a05753/badges) | 18 | Avanade | France |
-| #6 | [Barnes Chism](https://www.credly.com/users/barnes-chism/badges) | 17 | Xebia | United States |
-|  | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 17 | Avanade | Brazil |
+| #5 | [Barnes Chism](https://www.credly.com/users/barnes-chism/badges) | 18 | Xebia | United States |
+|  | [Vincent Marchal](https://www.credly.com/users/vincent-marchal.87a05753/badges) | 18 | Avanade | France |
+| #7 | [Joao Pedro Alexandre Vieira](https://www.credly.com/users/joao-pedro-alexandre-vieira/badges) | 17 | Avanade | Brazil |
 | #8 | [Diego Giglioli](https://www.credly.com/users/diego-giglioli.bb64eaa5/badges) | 16 | Avanade | Brazil |
 |  | [Hidde de Smet](https://www.credly.com/users/hidde-de-smet/badges) | 16 | Xebia | Netherlands |
 |  | [Matheus Barros](https://www.credly.com/users/matheus-barros.1892a132/badges) | 16 | Avanade | Brazil |
@@ -22,8 +22,8 @@
 
 ## 📊 Statistics
 
-- **Total Certified Users**: 24,947
-- **Total Badges Earned**: 31,421
+- **Total Certified Users**: 24,942
+- **Total Badges Earned**: 31,462
 - **Average Badges per User**: 1.26
 - **Highest Badge Count**: 19
 

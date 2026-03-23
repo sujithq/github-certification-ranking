@@ -101,6 +101,19 @@ python3 fetch_country.py "Brazil"
 python3 fetch_country.py "United States"
 ```
 
+### Fetch Details for a Specific User
+
+```bash
+# By Credly UUID
+python3 fetch_user.py "123e4567-e89b-12d3-a456-426614174000"
+
+# By Credly username
+python3 fetch_user.py "john-doe"
+
+# By Credly profile URL
+python3 fetch_user.py "https://www.credly.com/users/john-doe/badges"
+```
+
 ### Fetch Data for All Countries
 
 ```bash
@@ -138,8 +151,10 @@ python3 generate_rankings.py
 ├── images/
 │   └── github-octocat.jpg             # Project image
 ├── fetch_country.py                   # Single country data fetcher
+├── fetch_user.py                      # Single user detailed badge fetcher
 ├── fetch_data.py                      # Parallel fetcher for all countries
 ├── fetch_large_country.py             # Optimized fetcher for large countries
+├── credly_badges.py                   # Shared Credly/GitHub badge logic
 ├── generate_rankings.py               # Main ranking generator
 ├── csv_metadata.json                  # Metadata for tracking updates
 ├── TOP10_*.md                         # Generated ranking files

@@ -11,19 +11,6 @@ import requests
 
 GITHUB_ORG_ID = "63074953-290b-4dce-86ce-ea04b4187219"
 
-ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS = {
-    "GitHub Copilot",
-    "GitHub Actions",
-    "GitHub Advanced Security",
-    "GitHub Foundations",
-    "GitHub Administration",
-    "Microsoft Certified: DevOps Engineer Expert",
-    "Microsoft Applied Skills: Accelerate AI-assisted development by using GitHub Copilot",
-    "Microsoft Applied Skills: Accelerate app development by using GitHub Copilot",
-    "Microsoft Applied Skills: Automate Azure Load Testing by using GitHub Actions",
-}
-
-# Core certifications we want to track for completion/missing status.
 TRACKED_GITHUB_CERTIFICATIONS = {
     "GitHub Foundations",
     "GitHub Actions",
@@ -35,6 +22,10 @@ TRACKED_GITHUB_CERTIFICATIONS = {
     "Microsoft Applied Skills: Accelerate app development by using GitHub Copilot",
     "Microsoft Applied Skills: Automate Azure Load Testing by using GitHub Actions",
 }
+
+# Microsoft external-badge allowlist currently mirrors tracked certifications.
+# Keep as a separate variable for future policy divergence.
+ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS = TRACKED_GITHUB_CERTIFICATIONS.copy()
 
 SOURCE_URLS = {
     "credly": {

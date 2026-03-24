@@ -7,7 +7,7 @@ from datetime import datetime
 import requests
 
 
-ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS = {
+ALLOWED_CERTIFICATION_NAMES = {
     'GitHub Copilot',
     'GitHub Actions',
     'GitHub Advanced Security',
@@ -17,7 +17,95 @@ ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS = {
     'Microsoft Applied Skills: Accelerate AI-assisted development by using GitHub Copilot',
     'Microsoft Applied Skills: Accelerate app development by using GitHub Copilot',
     'Microsoft Applied Skills: Automate Azure Load Testing by using GitHub Actions',
+    'GitHub Partner Pulse - Skilled'
 }
+
+ALLOWED_ISSUER_ENTITY_IDS = {
+    # Microsoft Global Channel Partner Sales (GCPS)
+    '51b3fa6d-3818-4bb7-9de4-3e39cbde79bd',
+}
+
+ALLOWED_ISSUER_NAME_PREFIXES = (
+    'microsoft',
+)
+
+
+def normalize_cert_name(value):
+    """Normalize cert names for robust allowlist matching."""
+    text = (value or '').replace('\u200b', '').strip()
+    return ' '.join(text.split())
+
+
+NORMALIZED_ALLOWED_CERTIFICATION_NAMES = {
+    normalize_cert_name(name) for name in ALLOWED_CERTIFICATION_NAMES
+}
+
+
+def is_allowed_cert_name(name):
+    """Return True when cert name is in allowlist after normalization."""
+    return normalize_cert_name(name) in NORMALIZED_ALLOWED_CERTIFICATION_NAMES
+
+
+def _is_allowed_issuer_name(value):
+    """Return True when issuer name matches configured issuer prefixes."""
+    normalized = (value or '').strip().lower()
+    return any(normalized.startswith(prefix) for prefix in ALLOWED_ISSUER_NAME_PREFIXES)
+
+
+def _has_allowed_issuer_entity_id(issuer):
+    """Return True when issuer has an allowlisted organization id."""
+    for entity in (issuer or {}).get('entities', []):
+        org_data = entity.get('entity', {})
+        org_id = (org_data.get('id') or '').strip()
+        if org_id in ALLOWED_ISSUER_ENTITY_IDS:
+            return True
+    return False
+
+
+def is_allowed_profile_issuer(issuer):
+    """Return True when profile issuer metadata matches issuer allowlist."""
+    if _has_allowed_issuer_entity_id(issuer):
+        return True
+
+    issuer_name = (issuer or {}).get('name')
+    if _is_allowed_issuer_name(issuer_name):
+        return True
+
+    summary = (issuer or {}).get('summary')
+    if _is_allowed_issuer_name(summary):
+        return True
+
+    for entity in (issuer or {}).get('entities', []):
+        entity_name = (entity.get('entity', {}) or {}).get('name')
+        if _is_allowed_issuer_name(entity_name):
+            return True
+
+    return False
+
+
+def is_allowed_external_issuer(issuer_name):
+    """Return True when external issuer name matches issuer allowlist."""
+    return _is_allowed_issuer_name(issuer_name)
+
+
+def is_allowed_profile_microsoft_issuer(issuer):
+    """Backward-compatible wrapper for previous function name."""
+    return is_allowed_profile_issuer(issuer)
+
+
+def is_allowed_external_microsoft_issuer(issuer_name):
+    """Backward-compatible wrapper for previous function name."""
+    return is_allowed_external_issuer(issuer_name)
+
+
+def is_microsoft_profile_issuer(issuer):
+    """Backward-compatible wrapper for profile issuer checks."""
+    return is_allowed_profile_issuer(issuer)
+
+
+def is_microsoft_external_issuer(issuer_name):
+    """Backward-compatible wrapper for external issuer checks."""
+    return is_allowed_external_issuer(issuer_name)
 
 
 def is_badge_expired(expires_at_date):
@@ -50,7 +138,7 @@ def fetch_github_external_badges(user_id):
             issuer_name = external_badge.get('issuer_name', '')
             expires_at_date = badge.get('expires_at_date')
 
-            if issuer_name == 'Microsoft' and badge_name.strip() in ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS:
+            if is_allowed_external_issuer(issuer_name) and is_allowed_cert_name(badge_name):
                 if not is_badge_expired(expires_at_date):
                     unique_badge_names.add(badge_name)
 
@@ -86,10 +174,9 @@ def fetch_github_org_badges(user_id):
                 expires_at_date = badge.get('expires_at_date')
 
                 issuer = badge.get('issuer', {})
-                issuer_name = (issuer.get('name') or '').strip()
                 if (
-                    issuer_name == 'Microsoft'
-                    and badge_name in ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS
+                    is_allowed_profile_issuer(issuer)
+                    and is_allowed_cert_name(badge_name)
                     and not is_badge_expired(expires_at_date)
                 ):
                     unique_badge_names.add(badge_name)

@@ -24,7 +24,7 @@ ALLOWED_GITHUB_CERTIFICATION_TITLES = {
     'Microsoft Applied Skills: Accelerate AI-assisted development by using GitHub Copilot',
     'Microsoft Applied Skills: Accelerate app development by using GitHub Copilot',
     'Microsoft Applied Skills: Automate Azure Load Testing by using GitHub Actions',
-    'GitHub Partner Pulse - Skilled',
+    'GitHub Partner Pulse -​ Skilled',
 }
 
 def is_badge_expired(expires_at_date):

@@ -11,12 +11,13 @@ import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
-ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS = {
+ALLOWED_GITHUB_CERTIFICATION_TITLES = {
     'GitHub Copilot',
     'GitHub Actions',
     'GitHub Advanced Security',
     'GitHub Foundations',
     'GitHub Administration',
+    'GitHub Partner Pulse - Skilled',
     'Microsoft Certified: DevOps Engineer Expert',
     'Microsoft Applied Skills: Accelerate AI-assisted development by using GitHub Copilot',
     'Microsoft Applied Skills: Accelerate app development by using GitHub Copilot',
@@ -42,7 +43,7 @@ def is_badge_expired(expires_at_date):
         return False
 
 def fetch_github_external_badges(user_id):
-    """Fetch GitHub external badges (Microsoft-issued) for a user, excluding expired ones and duplicates"""
+    """Fetch GitHub external badges for a user, excluding expired ones and duplicates"""
     url = f"https://www.credly.com/api/v1/users/{user_id}/external_badges/open_badges/public?page=1&page_size=48"
     
     try:
@@ -55,11 +56,10 @@ def fetch_github_external_badges(user_id):
         for badge in data.get('data', []):
             external_badge = badge.get('external_badge', {})
             badge_name = external_badge.get('badge_name', '')
-            issuer_name = external_badge.get('issuer_name', '')
             expires_at_date = badge.get('expires_at_date')
             
-            # Check if it's an allowed GitHub certification issued by Microsoft and not expired
-            if issuer_name == 'Microsoft' and badge_name.strip() in ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS:
+            # Check if it's an allowed GitHub certification (issuer-agnostic) and not expired
+            if badge_name.strip() in ALLOWED_GITHUB_CERTIFICATION_TITLES:
                 if not is_badge_expired(expires_at_date):
                     # Only count if badge name is unique
                     unique_badge_names.add(badge_name)

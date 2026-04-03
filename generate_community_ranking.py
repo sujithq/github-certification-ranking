@@ -8,6 +8,7 @@ Excludes partner-exclusive certifications, keeping only community certifications
 - GitHub Actions
 - GitHub Copilot
 - GitHub Foundations
+- GitHub Partner Pulse - Skilled
 - Microsoft Certified: DevOps Engineer Expert
 - Microsoft Applied Skills (GitHub-related)
 """
@@ -27,15 +28,17 @@ ALLOWED_ORG_BADGES = {
     'GitHub Actions',
     'GitHub Copilot',
     'GitHub Foundations',
+    'GitHub Partner Pulse - Skilled',
 }
 
-# Community certifications allowed from Microsoft (external badges)
-ALLOWED_MICROSOFT_BADGES = {
+# Community certifications allowed from external badges (any issuer, matched by title)
+ALLOWED_EXTERNAL_BADGE_TITLES = {
     'GitHub Copilot',
     'GitHub Actions',
     'GitHub Advanced Security',
     'GitHub Foundations',
     'GitHub Administration',
+    'GitHub Partner Pulse - Skilled',
     'Microsoft Certified: DevOps Engineer Expert',
     'Microsoft Applied Skills: Accelerate AI-assisted development by using GitHub Copilot',
     'Microsoft Applied Skills: Accelerate app development by using GitHub Copilot',
@@ -98,7 +101,7 @@ def fetch_community_org_badges(user_id):
 
 
 def fetch_community_external_badges(user_id):
-    """Fetch community external badges (Microsoft-issued)"""
+    """Fetch community external badges (any issuer, matched by title)"""
     url = f"https://www.credly.com/api/v1/users/{user_id}/external_badges/open_badges/public?page=1&page_size=48"
 
     try:
@@ -110,10 +113,9 @@ def fetch_community_external_badges(user_id):
         for badge in data.get('data', []):
             external_badge = badge.get('external_badge', {})
             badge_name = external_badge.get('badge_name', '').strip()
-            issuer_name = external_badge.get('issuer_name', '')
             expires_at_date = badge.get('expires_at_date')
 
-            if issuer_name == 'Microsoft' and badge_name in ALLOWED_MICROSOFT_BADGES:
+            if badge_name in ALLOWED_EXTERNAL_BADGE_TITLES:
                 if not is_badge_expired(expires_at_date):
                     unique_badge_names.add(badge_name)
 

@@ -2,7 +2,7 @@ first_name,middle_name,last_name,badge_count,profile_url
 Htoo,Myat,Aung,1,/users/htoo-myat-aung/badges
 Shwe Win,,Aung,1,/users/shwe-win-aung/badges
 Zaw Phyo,,Aung,1,/users/zaw-phyo-aung.b63d92f9/badges
-Bo Bo,,Han,1,/users/bo-bo-han.ac19738f/badges
+Bo Bo,,Han,0,/users/bo-bo-han.ac19738f/badges
 Khant,,Hmue,1,/users/khant-hmue/badges
 Khant Ko Ko,,Htet,1,/users/khant-ko-ko-htet/badges
 Maung,,Htet,1,/users/mg-mg-htet.ecc719dc/badges
@@ -26,7 +26,7 @@ Ye Yint,,Thu,1,/users/ye-yint-thu.760c5fbd/badges
 Phyo,,Thura,1,/users/phyo-thura.4723e313/badges
 Soe,,Thura,1,/users/thixpin/badges
 Yarzar,,Tin Shwe,1,/users/yarzar-tin-shwe/badges
-Thida,,Tun,2,/users/thida-tun/badges
+Thida,,Tun,0,/users/thida-tun/badges
 Sithu,,Win,1,/users/sithu-win/badges
 Htet Aung,,Yin,1,/users/hay-pp/badges
 Kaung Thant,,Zae,1,/users/kaung-thant-zae/badges

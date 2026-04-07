@@ -10,8 +10,12 @@ import glob
 import json
 import os
 import requests
+import sys
 from collections import defaultdict
 from datetime import datetime
+
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # Continent mapping
 CONTINENT_MAP = {
@@ -132,15 +136,41 @@ def load_metadata():
             return json.load(f)
     return {}
 
-def read_all_csv_files(base_path):
+
+def should_include_country(country_name, target=None):
+    """Check whether a country belongs to the selected target scope."""
+    if not target or target == 'world':
+        return True
+
+    country_lower = country_name.lower().replace('-', ' ')
+    if target == 'brazil':
+        return country_lower == 'brazil'
+
+    target_continents = {
+        'americas': 'Americas',
+        'europe': 'Europe',
+        'asia': 'Asia',
+        'africa': 'Africa',
+        'oceania': 'Oceania',
+    }
+
+    return get_continent(country_lower) == target_continents.get(target)
+
+
+def read_all_csv_files(base_path, target=None):
     """Read all CSV files and return users list"""
     users = []
     csv_files = glob.glob(os.path.join(base_path, 'datasource', 'github-certs-*.csv'))
-    metadata = load_metadata()
-    
-    print(f"📂 Processing {len(csv_files)} CSV files...")
-    
+
+    selected_csv_files = []
     for csv_file in csv_files:
+        country = os.path.basename(csv_file).replace('github-certs-', '').replace('.csv', '')
+        if should_include_country(country, target):
+            selected_csv_files.append(csv_file)
+    
+    print(f"📂 Processing {len(selected_csv_files)} CSV files...")
+    
+    for csv_file in selected_csv_files:
         country = os.path.basename(csv_file).replace('github-certs-', '').replace('.csv', '')
         country_display = country.replace('-', ' ').title()
         continent = get_continent(country)
@@ -178,16 +208,20 @@ def read_all_csv_files(base_path):
             print(f"⚠️  Error processing {csv_file}: {e}")
             continue
     
-    print(f"✅ Loaded {len(users)} users from all files")
+    print(f"✅ Loaded {len(users)} users from selected files")
     return users
 
-def get_outdated_csvs():
+
+def get_outdated_csvs(target=None):
     """Get list of CSVs that weren't updated in the last run"""
     metadata = load_metadata()
     current_time = datetime.now()
     outdated = []
     
     for country, info in metadata.items():
+        if not should_include_country(country, target):
+            continue
+
         last_updated = datetime.fromisoformat(info['last_updated'])
         hours_old = (current_time - last_updated).total_seconds() / 3600
         
@@ -201,7 +235,7 @@ def get_outdated_csvs():
     
     return sorted(outdated, key=lambda x: x['hours_old'], reverse=True)
 
-def generate_markdown_top10(users, title, filename, filter_func=None):
+def generate_markdown_top10(users, title, filename, filter_func=None, outdated=None):
     """Generate TOP 10 markdown file with position-based ranking (tied users on same row)"""
     
     # Filter users if filter function provided
@@ -244,7 +278,8 @@ def generate_markdown_top10(users, title, filename, filter_func=None):
         user['company'] = company
     
     # Get outdated CSVs
-    outdated = get_outdated_csvs()
+    if outdated is None:
+        outdated = get_outdated_csvs()
     
     # Generate markdown content
     content = f"""# {title}
@@ -425,10 +460,63 @@ The following countries have data that was not updated in the last run:
     
     print(f"✅ Generated: {filename}")
 
-def main():
+
+def get_ranking_configs():
+    """Return ranking configuration by target name."""
+    return {
+        'brazil': (
+            "🇧🇷 TOP 10 GitHub Certifications - Brazil",
+            "TOP10_BRAZIL.md",
+            lambda u: u['country'].lower() == 'brazil',
+        ),
+        'americas': (
+            "🗽 TOP 10 GitHub Certifications - Americas",
+            "TOP10_AMERICAS.md",
+            lambda u: u['continent'] == 'Americas',
+        ),
+        'europe': (
+            "🇪🇺 TOP 10 GitHub Certifications - Europe",
+            "TOP10_EUROPE.md",
+            lambda u: u['continent'] == 'Europe',
+        ),
+        'asia': (
+            "🌏 TOP 10 GitHub Certifications - Asia",
+            "TOP10_ASIA.md",
+            lambda u: u['continent'] == 'Asia',
+        ),
+        'africa': (
+            "🦁 TOP 10 GitHub Certifications - Africa",
+            "TOP10_AFRICA.md",
+            lambda u: u['continent'] == 'Africa',
+        ),
+        'oceania': (
+            "🌊 TOP 10 GitHub Certifications - Oceania",
+            "TOP10_OCEANIA.md",
+            lambda u: u['continent'] == 'Oceania',
+        ),
+        'world': (
+            "🌍 TOP 10 GitHub Certifications - Global",
+            "TOP10_WORLD.md",
+            None,
+        ),
+    }
+
+
+def generate_target(users, target):
+    """Generate a single ranking target."""
+    ranking_configs = get_ranking_configs()
+    title, filename, filter_func = ranking_configs[target]
+    generate_markdown_top10(users, title, filename, filter_func, get_outdated_csvs(target))
+
+def main(target=None):
     """Main execution function"""
+    ranking_configs = get_ranking_configs()
+
     print("=" * 80)
-    print("GitHub Certifications Rankings Generator")
+    if target:
+        print(f"GitHub Certifications Rankings Generator - {target.upper()}")
+    else:
+        print("GitHub Certifications Rankings Generator")
     print("=" * 80)
     print()
     
@@ -436,76 +524,41 @@ def main():
     base_path = os.path.dirname(os.path.abspath(__file__))
     
     # Read all CSV files
-    users = read_all_csv_files(base_path)
+    users = read_all_csv_files(base_path, target)
     
     if not users:
         print("❌ No users found in CSV files!")
         return
     
     print()
-    print("📝 Generating markdown files...")
+    if target:
+        print("📝 Generating markdown file...")
+    else:
+        print("📝 Generating markdown files...")
     print()
-    
-    # Generate TOP 10 Brazil
-    generate_markdown_top10(
-        users,
-        "🇧🇷 TOP 10 GitHub Certifications - Brazil",
-        "TOP10_BRAZIL.md",
-        lambda u: u['country'].lower() == 'brazil'
-    )
-    
-    # Generate TOP 10 Americas
-    generate_markdown_top10(
-        users,
-        "🗽 TOP 10 GitHub Certifications - Americas",
-        "TOP10_AMERICAS.md",
-        lambda u: u['continent'] == 'Americas'
-    )
-    
-    # Generate TOP 10 Europe
-    generate_markdown_top10(
-        users,
-        "🇪🇺 TOP 10 GitHub Certifications - Europe",
-        "TOP10_EUROPE.md",
-        lambda u: u['continent'] == 'Europe'
-    )
-    
-    # Generate TOP 10 Asia
-    generate_markdown_top10(
-        users,
-        "� TOP 10 GitHub Certifications - Asia",
-        "TOP10_ASIA.md",
-        lambda u: u['continent'] == 'Asia'
-    )
-    
-    # Generate TOP 10 Africa
-    generate_markdown_top10(
-        users,
-        "🦁 TOP 10 GitHub Certifications - Africa",
-        "TOP10_AFRICA.md",
-        lambda u: u['continent'] == 'Africa'
-    )
-    
-    # Generate TOP 10 Oceania
-    generate_markdown_top10(
-        users,
-        "🌊 TOP 10 GitHub Certifications - Oceania",
-        "TOP10_OCEANIA.md",
-        lambda u: u['continent'] == 'Oceania'
-    )
-    
-    # Generate TOP 10 Global
-    generate_markdown_top10(
-        users,
-        "🌍 TOP 10 GitHub Certifications - Global",
-        "TOP10_WORLD.md",
-        None  # No filter, all users
-    )
+
+    if target:
+        generate_target(users, target)
+    else:
+        for ranking_target in ranking_configs:
+            generate_target(users, ranking_target)
     
     print()
     print("=" * 80)
-    print("✨ All rankings generated successfully!")
+    if target:
+        print(f"✨ {target.capitalize()} ranking generated successfully!")
+    else:
+        print("✨ All rankings generated successfully!")
     print("=" * 80)
 
 if __name__ == "__main__":
-    main()
+    target = None
+    if len(sys.argv) > 1:
+        target = sys.argv[1].lower()
+        valid_targets = list(get_ranking_configs().keys())
+        if target not in valid_targets:
+            print(f"❌ Invalid target: {target}")
+            print(f"Valid targets: {', '.join(valid_targets)}")
+            sys.exit(1)
+
+    main(target)

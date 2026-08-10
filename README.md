@@ -127,6 +127,20 @@ python3 fetch_large_country.py "United States"
 python3 generate_rankings.py
 ```
 
+### Find Missing Certifications for a Person
+
+Use a Credly username or public profile URL:
+
+```bash
+python3 find_missing_certs.py "hezekiah-ogundele"
+python3 find_missing_certs.py "https://www.credly.com/users/hezekiah-ogundele/badges"
+```
+
+The command compares the person's active certifications with
+`certification_catalog.json`, which is refreshed whenever rankings are generated.
+The catalog includes core, partner, sales, and allowed Microsoft-issued credentials,
+so a listed credential may not be available to every person.
+
 ## 📁 Repository Structure
 
 ```
@@ -145,6 +159,8 @@ python3 generate_rankings.py
 ├── fetch_data.py                      # Parallel fetcher for all countries
 ├── fetch_large_country.py             # Optimized fetcher for large countries
 ├── generate_rankings.py               # Main ranking generator
+├── find_missing_certs.py              # Missing certifications lookup for one person
+├── certification_catalog.json         # Current tracked certification universe
 ├── csv_metadata.json                  # Metadata for tracking updates
 ├── TOP10_*.md                         # Generated ranking files
 └── README.md                          # This file

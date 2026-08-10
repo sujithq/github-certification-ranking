@@ -15,19 +15,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 from certifications import (
-    ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS,
-    normalize_badge_name,
+    fetch_user_certifications,
     request_with_retries,
-    is_excluded_badge,
 )
 
 # --- Certification tooltip support ---
-GITHUB_ORG_ID = '63074953-290b-4dce-86ce-ea04b4187219'
-
 # Cache of profile_url -> set of valid cert names (or None when the fetch failed).
-_USER_CERTS_CACHE = {}
+_USER_CERTS_CACHE: dict[str, set[str] | None] = {}
 # Union of every valid certification held by any ranked member across all rankings.
-GLOBAL_CERT_UNIVERSE = set()
+GLOBAL_CERT_UNIVERSE: set[str] = set()
 
 # Continent mapping
 CONTINENT_MAP = {
@@ -217,17 +213,7 @@ def get_outdated_csvs():
     
     return sorted(outdated, key=lambda x: x['hours_old'], reverse=True)
 
-def _cert_is_expired(expires_at_date):
-    """Check if a badge is expired based on expires_at_date (format YYYY-MM-DD)."""
-    if not expires_at_date:
-        return False
-    try:
-        return datetime.strptime(expires_at_date, "%Y-%m-%d").date() < datetime.now().date()
-    except Exception:
-        return False
-
-
-def fetch_user_certs(profile_url):
+def fetch_user_certs(profile_url: str) -> set[str] | None:
     """Return the set of valid (non-expired, deduplicated) GitHub certification
     names for a user, combining GitHub org badges and allowed Microsoft external
     badges. Cached by profile_url. Returns None on fetch failure so callers can
@@ -237,52 +223,24 @@ def fetch_user_certs(profile_url):
     if profile_url in _USER_CERTS_CACHE:
         return _USER_CERTS_CACHE[profile_url]
 
-    username = profile_url.split('/')[2] if '/users/' in profile_url else ''
-    if not username:
-        _USER_CERTS_CACHE[profile_url] = set()
-        return set()
-
-    names = set()
     try:
-        # GitHub org badges (paginated)
-        page = 1
-        while True:
-            resp = request_with_retries(
-                f"https://www.credly.com/users/{username}/badges.json?page={page}&per_page=100",
-                timeout=30,
-            )
-            badges = resp.json().get('data', [])
-            if not badges:
-                break
-            for badge in badges:
-                entities = badge.get('issuer', {}).get('entities', [])
-                if any(e.get('entity', {}).get('id') == GITHUB_ORG_ID for e in entities):
-                    if not _cert_is_expired(badge.get('expires_at_date')):
-                        name = badge.get('badge_template', {}).get('name', '')
-                        if name and not is_excluded_badge(name):
-                            names.add(name)
-            page += 1
-            if page > 10:
-                break
-
-        # Microsoft-issued external badges (allowlist only)
-        resp = request_with_retries(
-            f"https://www.credly.com/api/v1/users/{username}/external_badges/open_badges/public?page=1&page_size=48",
-            timeout=30,
-        )
-        for badge in resp.json().get('data', []):
-            eb = badge.get('external_badge', {})
-            name = eb.get('badge_name', '').strip()
-            if eb.get('issuer_name') == 'Microsoft' and name in ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS:
-                if not _cert_is_expired(badge.get('expires_at_date')):
-                    names.add(normalize_badge_name(name))
-    except Exception as e:
-        print(f"    ⚠️  Failed to fetch certs for {username}: {e}")
+        names = fetch_user_certifications(profile_url)
+    except ValueError as error:
+        print(f"    ⚠️  Failed to identify Credly profile {profile_url}: {error}")
         _USER_CERTS_CACHE[profile_url] = None
         return None
 
     _USER_CERTS_CACHE[profile_url] = names
     return names
+
+
+def save_certification_catalog(base_path: str) -> None:
+    """Write the certification universe used by missing-cert calculations."""
+    catalog_path = os.path.join(base_path, 'certification_catalog.json')
+    with open(catalog_path, 'w', encoding='utf-8') as catalog_file:
+        json.dump({'certifications': sorted(GLOBAL_CERT_UNIVERSE)}, catalog_file, indent=2)
+        catalog_file.write('\n')
+    print(f"✅ Generated: {os.path.basename(catalog_path)}")
 
 
 def _cert_tooltip(header, items):
@@ -604,6 +562,10 @@ def main():
             if certs:
                 GLOBAL_CERT_UNIVERSE.update(certs)
     print(f"🌐 Universe: {len(GLOBAL_CERT_UNIVERSE)} distinct certifications")
+    if GLOBAL_CERT_UNIVERSE:
+        save_certification_catalog(base_path)
+    else:
+        print("⚠️  Certification universe is empty; keeping the existing catalog")
     
     print()
     print("📝 Generating markdown files...")

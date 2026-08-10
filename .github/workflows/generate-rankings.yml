@@ -44,8 +44,8 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Add markdown files, CSV files in datasource, and metadata
-          git add TOP10_*.md README.md datasource/*.csv csv_metadata.json
+          # Add markdown files, CSV files in datasource, metadata, and the certification catalog
+          git add TOP10_*.md README.md datasource/*.csv csv_metadata.json certification_catalog.json
           
           if git diff --staged --quiet; then
             echo "No changes to commit"

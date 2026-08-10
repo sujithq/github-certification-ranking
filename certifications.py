@@ -5,12 +5,16 @@ Shared certification allowlists and resilient fetch helpers.
 """
 
 import os
+import re
 import time
+from datetime import datetime
+from urllib.parse import urlparse
 
 import requests
 
 # HTTP status codes worth retrying (rate limiting + transient server errors).
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
+GITHUB_ORG_ID = '63074953-290b-4dce-86ce-ea04b4187219'
 
 
 def request_with_retries(url, timeout=30, max_retries=3, base_delay=3):
@@ -122,3 +126,89 @@ BADGE_NAME_ALIASES = {
 def normalize_badge_name(badge_name):
     """Normalize badge name to its canonical form to avoid counting renamed badges as duplicates."""
     return BADGE_NAME_ALIASES.get(badge_name, badge_name)
+
+
+def parse_credly_username(person: str) -> str:
+    """Return a Credly username from a username or public profile URL."""
+    value = person.strip()
+    path = urlparse(value).path if '://' in value else value
+    parts = [part for part in path.split('/') if part]
+
+    if len(parts) >= 2 and parts[0].lower() == 'users':
+        username = parts[1]
+    elif len(parts) == 1:
+        username = parts[0]
+    else:
+        raise ValueError('Expected a Credly username or /users/<username> profile URL')
+
+    if not re.fullmatch(r'[A-Za-z0-9._-]+', username):
+        raise ValueError(f'Invalid Credly username: {username}')
+    return username
+
+
+def _is_badge_expired(expires_at_date: str | None) -> bool:
+    """Return True when a YYYY-MM-DD expiration date is in the past."""
+    if not expires_at_date:
+        return False
+    try:
+        return datetime.strptime(expires_at_date, '%Y-%m-%d').date() < datetime.now().date()
+    except (TypeError, ValueError):
+        return False
+
+
+def fetch_user_certifications(person: str) -> set[str] | None:
+    """Fetch active, tracked certification names for one public Credly user.
+
+    Returns None when either Credly endpoint fails so callers do not report a
+    misleading set of missing certifications from partial data.
+    """
+    username = parse_credly_username(person)
+    certification_names: set[str] = set()
+
+    try:
+        for page in range(1, 11):
+            response = request_with_retries(
+                f'https://www.credly.com/users/{username}/badges.json?page={page}&per_page=100',
+                timeout=30,
+            )
+            badges = response.json().get('data', [])
+            if not badges:
+                break
+
+            for badge in badges:
+                entities = badge.get('issuer', {}).get('entities', [])
+                is_github_badge = any(
+                    item.get('entity', {}).get('id') == GITHUB_ORG_ID
+                    for item in entities
+                )
+                badge_name = badge.get('badge_template', {}).get('name', '').strip()
+                if (
+                    is_github_badge
+                    and badge_name
+                    and not is_excluded_badge(badge_name)
+                    and not _is_badge_expired(badge.get('expires_at_date'))
+                ):
+                    certification_names.add(normalize_badge_name(badge_name))
+
+        for page in range(1, 11):
+            response = request_with_retries(
+                f'https://www.credly.com/api/v1/users/{username}/external_badges/open_badges/public?page={page}&page_size=48',
+                timeout=30,
+            )
+            external_badges = response.json().get('data', [])
+            for badge in external_badges:
+                external_badge = badge.get('external_badge', {})
+                badge_name = external_badge.get('badge_name', '').strip()
+                if (
+                    external_badge.get('issuer_name') == 'Microsoft'
+                    and badge_name in ALLOWED_MICROSOFT_GITHUB_CERTIFICATIONS
+                    and not _is_badge_expired(badge.get('expires_at_date'))
+                ):
+                    certification_names.add(normalize_badge_name(badge_name))
+            if len(external_badges) < 48:
+                break
+    except (requests.RequestException, ValueError, KeyError, TypeError, AttributeError) as error:
+        print(f'⚠️  Failed to fetch certifications for {username}: {error}')
+        return None
+
+    return certification_names
